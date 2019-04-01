@@ -18,5 +18,5 @@ load.sh does the following:
 Instructions:
 - Copy target program to "mark.cc"
 - Edit load.sh for preferred cluster resources
-- Use qsub "load.sh" to submit a PBS batch
+- Use "qsub load.sh" to submit a PBS batch
 - Results are saved to "out.txt"
