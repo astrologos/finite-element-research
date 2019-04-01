@@ -1,0 +1,15 @@
+
+module purge
+module load gcc
+module load openmpi
+module load atlas
+module load glm
+module load lua
+module load python
+module load boost
+module load phdf5
+module load p4est
+module load trilinos
+module load dealii
+module load cmake
+
