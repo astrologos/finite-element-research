@@ -23,14 +23,18 @@
  *
  */
 
+/*
+ * NOTE: Built-in ILU preconditioner is not optimized for parallelism.
+ */
+
 // Load resources
 #include <deal.II/base/quadrature_lib.h>
 #include <deal.II/base/function.h>
 #include <deal.II/base/logstream.h>
 #include <deal.II/base/table_handler.h>
 #include <deal.II/base/timer.h>
-#include <deal.II/base/multithread_info.h>
 #include <deal.II/lac/vector.h>
+#include <deal.II/lac/sparse_ilu.h>
 #include <deal.II/lac/sparse_matrix.h>
 #include <deal.II/lac/solver_cg.h>
 #include <deal.II/lac/precondition.h>
@@ -53,6 +57,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+#include <deal.II/base/multithread_info.h>
 
 namespace current
 {
@@ -68,7 +73,7 @@ namespace current
   private:
     void setup_system();
     void assemble_and_solve();
-    void solveSSOR(double omega);
+    void solveILU();
 
     Triangulation<dim>   triangulation;
     FE_Q<dim>            fe;
@@ -181,7 +186,7 @@ namespace current
     // Then redistribute constraints to the rest of the DOFs
     Timer timer;
     timer.start();
-    solveSSOR(1.2);
+    solveILU();
     timer.stop();
     mvcs.distribute (x);
 
@@ -202,22 +207,23 @@ namespace current
     table_out.add_value ("cells", triangulation.n_active_cells());
     table_out.add_value ("|u|_1", norm);
     table_out.add_value ("error", std::fabs(norm-std::sqrt(3.14159265358/2)));
-    table_out.add_value ("elapsed CPU time (sec)",timer.wall_time());
+    table_out.add_value ("elapsed CPU time (sec)",timer());
+    table_out.add_value ("elapsed Wall time (sec)",timer.wall_time());
     timer.reset();
   }
 
 
   // Solve the system
   template <int dim>
-  void LaplaceProblem<dim>::solveSSOR(double omega)
+  void LaplaceProblem<dim>::solveILU()
   {
     SolverControl           solver_control (1000, 1e-12);
     SolverCG<>              cg (solver_control);
 
-    PreconditionSSOR<> ssor;
-    ssor.initialize(S, omega);
+    SparseILU<double> ilu;
+    ilu.initialize(S);
 
-    cg.solve(S, x, b, ssor);
+    cg.solve(S, x, b, ilu);
   }
 
   // Run the Laplace problem
@@ -229,12 +235,12 @@ namespace current
     triangulation.set_all_manifold_ids_on_boundary(0);
     triangulation.set_manifold (0, boundary);
 
-    // Use 6 refinements to calculate solution
-    for (unsigned int cycle=0; cycle<6; ++cycle, triangulation.refine_global(1))
-      {
-        setup_system();
-        assemble_and_solve();
-      };
+    // Refine until n_active_cells > (some number TBD)
+    while (triangulation.n_active_cells() < 10000)
+	triangulation.refine_global(1);    
+
+    setup_system();
+    assemble_and_solve();
 
     // Write out to console
     table_out.set_precision("|u|_1", 6);
@@ -249,6 +255,7 @@ namespace current
 // Execute
 int main()
 {
+  dealii::MultithreadInfo::set_thread_limit(48);
   try
     {
       std::cout.precision(5);
