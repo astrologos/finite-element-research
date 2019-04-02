@@ -1,0 +1,76 @@
+-- Autopilot invoked
+-- Run   $ make info  to print a detailed help message
+-- Configuring done
+CMake Warning at /opt/apps/gcc4_7/openmpi1_6/dealii/8.5.0/share/deal.II/macros/macro_deal_ii_invoke_autopilot.cmake:48 (ADD_EXECUTABLE):
+  Cannot generate a safe linker search path for target step-11 because there
+  is a cycle in the constraint graph:
+
+    dir 0 is [/opt/apps/gcc4_7/atlas/3.10.2/lib]
+      dir 1 must precede it due to link library [libtatlas.so]
+    dir 1 is [/opt/apps/gcc4_7/atlas/3.10.1/lib]
+      dir 0 must precede it due to link library [libtatlas.so]
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  CMakeLists.txt:39 (DEAL_II_INVOKE_AUTOPILOT)
+
+
+CMake Warning at /opt/apps/gcc4_7/openmpi1_6/dealii/8.5.0/share/deal.II/macros/macro_deal_ii_invoke_autopilot.cmake:48 (ADD_EXECUTABLE):
+  Cannot generate a safe runtime search path for target step-11 because there
+  is a cycle in the constraint graph:
+
+    dir 0 is [/opt/apps/gcc4_7/openmpi1_6/dealii/8.5.0/lib]
+    dir 1 is [/opt/apps/gcc4_7/openmpi1_6/p4est/1.1/DEBUG/lib]
+    dir 2 is [/opt/apps/gcc4_7/openmpi/1.6.5/lib]
+    dir 3 is [/opt/apps/gcc4_7/openmpi1_6/trilinos/11.12.1/lib]
+    dir 4 is [/opt/apps/gcc4_7/atlas/3.10.2/lib]
+      dir 8 must precede it due to runtime library [libtatlas.so]
+    dir 5 is [/opt/apps/gcc4_7/openmpi1_6/petsc/3.4.4/real-double/lib]
+    dir 6 is [/opt/apps/gcc4_7/openmpi1_6/parmetis/4.0.3/lib]
+    dir 7 is [/opt/apps/gcc4_7/openmpi1_6/phdf5/1.8.8/lib]
+    dir 8 is [/opt/apps/gcc4_7/atlas/3.10.1/lib]
+      dir 4 must precede it due to runtime library [libtatlas.so]
+    dir 9 is [/opt/mellanox/mxm/lib]
+    dir 10 is [/opt/torque/4.2.9/lib]
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  CMakeLists.txt:39 (DEAL_II_INVOKE_AUTOPILOT)
+
+
+-- Generating done
+-- Build files have been written to: /home/ajack/research/codes/examples/step-11
+[ 50%] Built target step-11
+Scanning dependencies of target run
+[100%] Run step-11 with Debug configuration
+Using mapping with degree 1:
+============================
+cells  |u|_1    error   
+    5 0.680402 0.572912 
+   20 1.088141 0.165173 
+   80 1.210142 0.043172 
+  320 1.242375 0.010939 
+ 1280 1.250569 0.002745 
+ 5120 1.252627 0.000687 
+
+Using mapping with degree 2:
+============================
+cells  |u|_1    error   
+    5 1.050963 0.202351 
+   20 1.203014 0.050300 
+   80 1.241120 0.012194 
+  320 1.250319 0.002996 
+ 1280 1.252572 0.000742 
+ 5120 1.253129 0.000185 
+
+Using mapping with degree 3:
+============================
+cells  |u|_1    error   
+    5 1.069381 0.183934 
+   20 1.206606 0.046708 
+   80 1.241611 0.011703 
+  320 1.250382 0.002932 
+ 1280 1.252580 0.000734 
+ 5120 1.253130 0.000184 
+
+[100%] Built target run

@@ -1,0 +1,11 @@
+#!/bin/bash
+clear
+rm -f ./CMakeCache.txt
+rm -f ./cmake_install.cmake
+rm -f -r ./CMakeFiles
+rm -f ./Makefile
+rm -f ./load.sh.o*
+rm -f ./*~
+rm -f ./*#
+rm -f ./mark
+echo 'Cleaned!'
