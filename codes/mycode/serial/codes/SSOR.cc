@@ -52,6 +52,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+#include <deal.II/base/multithread_info.h>
 
 namespace current
 {
@@ -249,6 +250,7 @@ namespace current
 // Execute
 int main()
 {
+  dealii::MultithreadInfo::set_thread_limit(1);
   try
     {
       std::cout.precision(5);

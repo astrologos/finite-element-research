@@ -33,7 +33,6 @@
 #include <deal.II/base/logstream.h>
 #include <deal.II/base/table_handler.h>
 #include <deal.II/base/timer.h>
-#include <deal.II/base/multithread_info.h>
 #include <deal.II/lac/vector.h>
 #include <deal.II/lac/sparse_ilu.h>
 #include <deal.II/lac/sparse_matrix.h>
@@ -58,6 +57,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+#include <deal.II/base/multithread_info.h>
 
 namespace current
 {
@@ -246,6 +246,7 @@ namespace current
     table_out.set_precision("|u|_1", 6);
     table_out.set_precision("error", 6);
     table_out.set_precision("elapsed CPU time (sec)",10);
+    table_out.set_precision("elapsed Wall time (sec)",10);
     table_out.write_text (std::cout);
     std::cout << std::endl;
   }
@@ -255,13 +256,14 @@ namespace current
 // Execute
 int main()
 {
+  dealii::MultithreadInfo::set_thread_limit(1);
   try
     {
       std::cout.precision(5);
 
       // Run Laplace problem for boundary mapping degrees <= (3)
       for (unsigned int poly_degree=1; poly_degree<=3; ++poly_degree)
-	for(int k=0;k<30;k++)        
+	for(int k=0;k<3;k++)        
             current::LaplaceProblem<2>(poly_degree).run();
     }
   catch (std::exception &exc)
