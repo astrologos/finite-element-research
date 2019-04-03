@@ -1,0 +1,10 @@
+/home/jack/research/fem-research/codes/mycode/test/CMakeFiles/rebuild_cache.dir
+/home/jack/research/fem-research/codes/mycode/test/CMakeFiles/edit_cache.dir
+/home/jack/research/fem-research/codes/mycode/test/CMakeFiles/info.dir
+/home/jack/research/fem-research/codes/mycode/test/CMakeFiles/strip_comments.dir
+/home/jack/research/fem-research/codes/mycode/test/CMakeFiles/run.dir
+/home/jack/research/fem-research/codes/mycode/test/CMakeFiles/step-11.dir
+/home/jack/research/fem-research/codes/mycode/test/CMakeFiles/debug.dir
+/home/jack/research/fem-research/codes/mycode/test/CMakeFiles/release.dir
+/home/jack/research/fem-research/codes/mycode/test/CMakeFiles/runclean.dir
+/home/jack/research/fem-research/codes/mycode/test/CMakeFiles/distclean.dir

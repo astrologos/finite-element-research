@@ -179,10 +179,7 @@ namespace current
     mvcs.condense (b);
     // Solve
     // Then redistribute constraints to the rest of the DOFs
-    Timer timer;
-    timer.start();
-    solveSSOR(1.0);
-    timer.stop(); 
+    solveSSOR(1.2);
     mvcs.distribute (x);
 
     // Find norm of solution
@@ -202,9 +199,6 @@ namespace current
     table_out.add_value ("cells", triangulation.n_active_cells());
     table_out.add_value ("|u|_1", norm);
     table_out.add_value ("error", std::fabs(norm-std::sqrt(3.14159265358/2)));
-    table_out.add_value ("elapsed CPU time (sec)",timer());
-    table_out.add_value ("elapsed Wall time (sec)",timer.wall_time());
-    timer.reset();
   }
 
 
@@ -217,8 +211,15 @@ namespace current
 
     PreconditionSSOR<> ssor;
     ssor.initialize(S, omega);
-
+    Timer timer;
+    timer.start();
     cg.solve(S, x, b, ssor);
+    timer.stop();
+    int old_precision=std::cout.precision();      
+    std::cout<<"  time elapsed in CG ="<<std::setprecision(3)
+               <<timer()<<"[CPU];"
+               <<timer.wall_time()<<"[Wall]"<<std::endl;    
+    std::cout.precision(old_precision);    
   }
 
   // Run the Laplace problem
@@ -250,6 +251,7 @@ namespace current
 // Execute
 int main()
 {
+  // Some arbitrarily large number
   dealii::MultithreadInfo::set_thread_limit(1);
   try
     {

@@ -183,11 +183,9 @@ namespace current
     mvcs.condense (S);
     mvcs.condense (b);
     // Solve
-    // Then redistribute constraints to the rest of the DOFs
-    Timer timer;
-    timer.start();
     solveILU();
-    timer.stop();
+
+    // Then redistribute constraints to the rest of the DOFs
     mvcs.distribute (x);
 
     // Find norm of solution
@@ -207,9 +205,6 @@ namespace current
     table_out.add_value ("cells", triangulation.n_active_cells());
     table_out.add_value ("|u|_1", norm);
     table_out.add_value ("error", std::fabs(norm-std::sqrt(3.14159265358/2)));
-    table_out.add_value ("elapsed CPU time (sec)",timer());
-    table_out.add_value ("elapsed Wall time (sec)",timer.wall_time());
-    timer.reset();
   }
 
 
@@ -223,7 +218,15 @@ namespace current
     SparseILU<double> ilu;
     ilu.initialize(S);
 
+    Timer timer;
+    timer.start();
     cg.solve(S, x, b, ilu);
+    timer.stop();
+    int old_precision=std::cout.precision();      
+    std::cout<<"  time elapsed in CG ="<<std::setprecision(3)
+               <<timer()<<"[CPU];"
+               <<timer.wall_time()<<"[Wall]"<<std::endl;    
+    std::cout.precision(old_precision);    
   }
 
   // Run the Laplace problem

@@ -58,6 +58,12 @@
 #include <iomanip>
 #include <cmath>
 #include <deal.II/base/multithread_info.h>
+#include <deal.II/lac/trilinos_parallel_block_vector.h>
+#include <deal.II/lac/trilinos_sparse_matrix.h>
+#include <deal.II/lac/trilinos_block_sparse_matrix.h>
+#include <deal.II/lac/trilinos_precondition.h>
+#include <deal.II/lac/trilinos_solver.h>
+
 
 namespace current
 {
@@ -183,11 +189,9 @@ namespace current
     mvcs.condense (S);
     mvcs.condense (b);
     // Solve
-    // Then redistribute constraints to the rest of the DOFs
-    Timer timer;
-    timer.start();
     solveILU();
-    timer.stop();
+
+    // Then redistribute constraints to the rest of the DOFs
     mvcs.distribute (x);
 
     // Find norm of solution
@@ -207,9 +211,6 @@ namespace current
     table_out.add_value ("cells", triangulation.n_active_cells());
     table_out.add_value ("|u|_1", norm);
     table_out.add_value ("error", std::fabs(norm-std::sqrt(3.14159265358/2)));
-    table_out.add_value ("elapsed CPU time (sec)",timer());
-    table_out.add_value ("elapsed Wall time (sec)",timer.wall_time());
-    timer.reset();
   }
 
 
@@ -218,12 +219,23 @@ namespace current
   void LaplaceProblem<dim>::solveILU()
   {
     SolverControl           solver_control (1000, 1e-12);
-    SolverCG<>              cg (solver_control);
+    TrilinosWrappers::SolverCG<double>              cg (solver_control);
 
-    SparseILU<double> ilu;
-    ilu.initialize(S);
+    TrilinosWrappers::PreconditionILU ilu;
+    TrilinosWrappers::SparseMatrix STril
+    TrilSparsity = TrilinosWrappers::SparsityPattern::copy_from(sparsity)
+    STril.reinit(TrilSparsity);
+    ilu.initialize(STril);
 
+    Timer timer;
+    timer.start();
     cg.solve(S, x, b, ilu);
+    timer.stop();
+    int old_precision=std::cout.precision();      
+    std::cout<<"  time elapsed in CG ="<<std::setprecision(3)
+               <<timer()<<"[CPU];"
+               <<timer.wall_time()<<"[Wall]"<<std::endl;    
+    std::cout.precision(old_precision);    
   }
 
   // Run the Laplace problem
@@ -256,7 +268,8 @@ namespace current
 // Execute
 int main()
 {
-  dealii::MultithreadInfo::set_thread_limit(1);
+  // Some arbitrarily large number
+  dealii::MultithreadInfo::set_thread_limit(4);
   try
     {
       std::cout.precision(5);
