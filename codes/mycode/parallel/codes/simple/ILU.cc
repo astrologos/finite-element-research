@@ -257,7 +257,7 @@ namespace current
 int main()
 {
   // Some arbitrarily large number
-  dealii::MultithreadInfo::set_thread_limit(500);
+  dealii::MultithreadInfo::set_thread_limit(16);
   try
     {
       std::cout.precision(5);
