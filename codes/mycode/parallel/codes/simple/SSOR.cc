@@ -259,7 +259,6 @@ int main()
 
       // Run Laplace problem for boundary mapping degrees <= (3)
       for (unsigned int poly_degree=1; poly_degree<=3; ++poly_degree)
-	for(int k=0;k<3;k++)        
             current::LaplaceProblem<2>(poly_degree).run();
     }
   catch (std::exception &exc)
