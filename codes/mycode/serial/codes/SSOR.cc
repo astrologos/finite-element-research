@@ -181,7 +181,7 @@ namespace current
     // Then redistribute constraints to the rest of the DOFs
     Timer timer;
     timer.start();
-    solveSSOR(1.2);
+    solveSSOR(1.0);
     timer.stop(); 
     mvcs.distribute (x);
 
@@ -212,7 +212,7 @@ namespace current
   template <int dim>
   void LaplaceProblem<dim>::solveSSOR(double omega)
   {
-    SolverControl           solver_control (1000, 1e-12);
+    SolverControl           solver_control (100000, 1e-12);
     SolverCG<>              cg (solver_control);
 
     PreconditionSSOR<> ssor;

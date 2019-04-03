@@ -23,10 +23,6 @@
  *
  */
 
-/*
- * NOTE: Built-in ILU preconditioner is not optimized for parallelism.
- */
-
 // Load resources
 #include <deal.II/base/quadrature_lib.h>
 #include <deal.II/base/function.h>
@@ -34,7 +30,6 @@
 #include <deal.II/base/table_handler.h>
 #include <deal.II/base/timer.h>
 #include <deal.II/lac/vector.h>
-#include <deal.II/lac/sparse_ilu.h>
 #include <deal.II/lac/sparse_matrix.h>
 #include <deal.II/lac/solver_cg.h>
 #include <deal.II/lac/precondition.h>
@@ -73,7 +68,7 @@ namespace current
   private:
     void setup_system();
     void assemble_and_solve();
-    void solveILU();
+    void solveSSOR(double omega);
 
     Triangulation<dim>   triangulation;
     FE_Q<dim>            fe;
@@ -186,8 +181,8 @@ namespace current
     // Then redistribute constraints to the rest of the DOFs
     Timer timer;
     timer.start();
-    solveILU();
-    timer.stop();
+    solveSSOR(1.0);
+    timer.stop(); 
     mvcs.distribute (x);
 
     // Find norm of solution
@@ -215,15 +210,15 @@ namespace current
 
   // Solve the system
   template <int dim>
-  void LaplaceProblem<dim>::solveILU()
+  void LaplaceProblem<dim>::solveSSOR(double omega)
   {
-    SolverControl           solver_control (1000, 1e-12);
+    SolverControl           solver_control (100000, 1e-12);
     SolverCG<>              cg (solver_control);
 
-    SparseILU<double> ilu;
-    ilu.initialize(S);
+    PreconditionSSOR<> ssor;
+    ssor.initialize(S, omega);
 
-    cg.solve(S, x, b, ilu);
+    cg.solve(S, x, b, ssor);
   }
 
   // Run the Laplace problem
@@ -246,7 +241,6 @@ namespace current
     table_out.set_precision("|u|_1", 6);
     table_out.set_precision("error", 6);
     table_out.set_precision("elapsed CPU time (sec)",10);
-    table_out.set_precision("elapsed Wall time (sec)",10);
     table_out.write_text (std::cout);
     std::cout << std::endl;
   }
