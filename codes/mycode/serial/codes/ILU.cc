@@ -245,6 +245,7 @@ namespace current
     table_out.set_precision("|u|_1", 6);
     table_out.set_precision("error", 6);
     table_out.set_precision("elapsed CPU time (sec)",10);
+    table_out.set_precision("elapsed Wall time (sec)",10);
     table_out.write_text (std::cout);
     std::cout << std::endl;
   }
@@ -260,7 +261,7 @@ int main()
 
       // Run Laplace problem for boundary mapping degrees <= (3)
       for (unsigned int poly_degree=1; poly_degree<=3; ++poly_degree)
-	for(int k=0;k<30;k++)        
+	for(int k=0;k<3;k++)        
             current::LaplaceProblem<2>(poly_degree).run();
     }
   catch (std::exception &exc)
