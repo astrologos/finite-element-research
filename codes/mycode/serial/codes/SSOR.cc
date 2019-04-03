@@ -231,7 +231,7 @@ namespace current
     triangulation.set_manifold (0, boundary);
 
     // Refine until n_active_cells > (some number TBD)
-    while (triangulation.n_active_cells() < 10000)
+    while (triangulation.n_active_cells() < 100000)
 	triangulation.refine_global(1);    
 
     setup_system();
@@ -256,7 +256,8 @@ int main()
 
       // Run Laplace problem for boundary mapping degrees <= (3)
       for (unsigned int poly_degree=1; poly_degree<=3; ++poly_degree)
-        current::LaplaceProblem<2>(poly_degree).run();
+	for(int k=0;k<30;k++)        
+            current::LaplaceProblem<2>(poly_degree).run();
     }
   catch (std::exception &exc)
     {
