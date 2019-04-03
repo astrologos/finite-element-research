@@ -16,46 +16,46 @@ Scanning dependencies of target run
 Boundary cell mapping with degree 1:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          59.4001000000                 59.3781 
+327680 1.253303 0.000011          15.0413090000           15.0797851086 
 
 Boundary cell mapping with degree 1:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          57.8108380000                 57.7729 
+327680 1.253303 0.000011          14.5442610000           14.5389838219 
 
 Boundary cell mapping with degree 1:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          57.5839790000                 57.5323 
+327680 1.253303 0.000011          14.4911850000           14.4921741486 
 
 Boundary cell mapping with degree 2:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253311 0.000003          57.6924470000                 57.6376 
+327680 1.253311 0.000003          14.4444010000           14.4452970028 
 
 Boundary cell mapping with degree 2:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253311 0.000003          57.8493250000                 57.7984 
+327680 1.253311 0.000003          14.3560130000           14.3529930115 
 
 Boundary cell mapping with degree 2:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253311 0.000003          57.7978030000                 57.7479 
+327680 1.253311 0.000003          14.4080970000           14.4040369987 
 
 Boundary cell mapping with degree 3:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253311 0.000003          57.5502930000                 57.5026 
+327680 1.253311 0.000003          14.3242940000           14.3366029263 
 
 Boundary cell mapping with degree 3:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253311 0.000003          57.5419060000                 57.4902 
+327680 1.253311 0.000003          14.2112170000           14.2065100670 
 
 Boundary cell mapping with degree 3:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253311 0.000003          57.1568970000                 57.1076 
+327680 1.253311 0.000003          14.1799320000           14.1762509346 
 
 [100%] Built target run

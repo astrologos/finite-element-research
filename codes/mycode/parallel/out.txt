@@ -4,7 +4,7 @@ Scanning dependencies of target release
 -- Run   $ make info  to print a detailed help message
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/ajack/fem-research/codes/mycode/serial
+-- Build files have been written to: /home/ajack/fem-research/codes/mycode/parallel
 Scanning dependencies of target mark
 [ 50%] Building CXX object CMakeFiles/mark.dir/mark.cc.o
 [100%] Linking CXX executable mark
@@ -16,46 +16,46 @@ Scanning dependencies of target run
 Boundary cell mapping with degree 1:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          59.4001000000                 59.3781 
+327680 1.253303 0.000011         799.6523290000           48.7794299126 
 
 Boundary cell mapping with degree 1:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          57.8108380000                 57.7729 
+327680 1.253303 0.000011         843.8476880000           52.1212208271 
 
 Boundary cell mapping with degree 1:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          57.5839790000                 57.5323 
+327680 1.253303 0.000011         865.1592740000           53.2193820477 
 
 Boundary cell mapping with degree 2:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253311 0.000003          57.6924470000                 57.6376 
+327680 1.253311 0.000003         801.8165790000           48.9650368690 
 
 Boundary cell mapping with degree 2:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253311 0.000003          57.8493250000                 57.7984 
+327680 1.253311 0.000003         824.7335300000           50.1371068954 
 
 Boundary cell mapping with degree 2:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253311 0.000003          57.7978030000                 57.7479 
+327680 1.253311 0.000003         809.7932310000           49.9482760429 
 
 Boundary cell mapping with degree 3:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253311 0.000003          57.5502930000                 57.5026 
+327680 1.253311 0.000003         854.4953230000           52.8689520359 
 
 Boundary cell mapping with degree 3:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253311 0.000003          57.5419060000                 57.4902 
+327680 1.253311 0.000003         867.4659090000           54.3683228493 
 
 Boundary cell mapping with degree 3:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253311 0.000003          57.1568970000                 57.1076 
+327680 1.253311 0.000003         882.1738160000           54.0783631802 
 
 [100%] Built target run
