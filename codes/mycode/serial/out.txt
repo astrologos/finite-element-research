@@ -16,142 +16,46 @@ Scanning dependencies of target run
 Boundary cell mapping with degree 1:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          43.2530950000                  9.7395 
+327680 1.253303 0.000011          59.4001000000                 59.3781 
 
 Boundary cell mapping with degree 1:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          42.1599300000                 11.5368 
+327680 1.253303 0.000011          57.8108380000                 57.7729 
 
 Boundary cell mapping with degree 1:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          42.8760160000                 11.7505 
+327680 1.253303 0.000011          57.5839790000                 57.5323 
 
-Boundary cell mapping with degree 1:
+Boundary cell mapping with degree 2:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          45.1943230000                 11.2575 
+327680 1.253311 0.000003          57.6924470000                 57.6376 
 
-Boundary cell mapping with degree 1:
+Boundary cell mapping with degree 2:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          40.0689520000                 10.4757 
+327680 1.253311 0.000003          57.8493250000                 57.7984 
 
-Boundary cell mapping with degree 1:
+Boundary cell mapping with degree 2:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          39.8994480000                 10.5140 
+327680 1.253311 0.000003          57.7978030000                 57.7479 
 
-Boundary cell mapping with degree 1:
+Boundary cell mapping with degree 3:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          40.3072040000                 10.7780 
+327680 1.253311 0.000003          57.5502930000                 57.5026 
 
-Boundary cell mapping with degree 1:
+Boundary cell mapping with degree 3:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          39.5129440000                  9.6000 
+327680 1.253311 0.000003          57.5419060000                 57.4902 
 
-Boundary cell mapping with degree 1:
+Boundary cell mapping with degree 3:
 ============================
 cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          44.5062600000                 10.8788 
+327680 1.253311 0.000003          57.1568970000                 57.1076 
 
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          39.2732940000                 10.7925 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          47.7417370000                  9.9725 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          39.5273910000                 11.3194 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          38.5455770000                 10.9973 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          41.2773350000                 11.1579 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          43.8234900000                 11.0775 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          47.7378760000                 11.0367 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          47.0824690000                 11.5121 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          45.8586270000                 11.4642 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          45.6037000000                 11.5953 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          45.1994450000                 11.2820 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          42.4484760000                 10.9845 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          44.3302530000                 11.3744 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          48.8763930000                 11.7803 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          42.4488570000                 11.1865 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          42.1169510000                 10.8736 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          42.5111630000                 10.9743 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          46.8841390000                 11.2352 
-
-Boundary cell mapping with degree 1:
-============================
-cells   |u|_1    error   elapsed CPU time (sec) elapsed Wall time (sec) 
-327680 1.253303 0.000011          48.4251030000                 11.9793 
-
-Boundary cell mapping with degree 1:
-============================
+[100%] Built target run
