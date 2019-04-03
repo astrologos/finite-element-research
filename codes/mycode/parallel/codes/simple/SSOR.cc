@@ -29,7 +29,6 @@
 #include <deal.II/base/logstream.h>
 #include <deal.II/base/table_handler.h>
 #include <deal.II/base/timer.h>
-#include <deal.II/base/multithread_info.h>
 #include <deal.II/lac/vector.h>
 #include <deal.II/lac/sparse_matrix.h>
 #include <deal.II/lac/solver_cg.h>
@@ -53,6 +52,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+#include <deal.II/base/multithread_info.h>
 
 namespace current
 {
@@ -181,7 +181,7 @@ namespace current
     // Then redistribute constraints to the rest of the DOFs
     Timer timer;
     timer.start();
-    solveSSOR(1.2);
+    solveSSOR(1.0);
     timer.stop(); 
     mvcs.distribute (x);
 
@@ -212,7 +212,7 @@ namespace current
   template <int dim>
   void LaplaceProblem<dim>::solveSSOR(double omega)
   {
-    SolverControl           solver_control (1000, 1e-12);
+    SolverControl           solver_control (100000, 1e-12);
     SolverCG<>              cg (solver_control);
 
     PreconditionSSOR<> ssor;
@@ -231,7 +231,7 @@ namespace current
     triangulation.set_manifold (0, boundary);
 
     // Refine until n_active_cells > (some number TBD)
-    while (triangulation.n_active_cells() < 10000)
+    while (triangulation.n_active_cells() < 100000)
 	triangulation.refine_global(1);    
 
     setup_system();
@@ -250,14 +250,16 @@ namespace current
 // Execute
 int main()
 {
-  dealii::MultithreadInfo::set_thread_limit(48);
+  // Some arbitrarily large number
+  dealii::MultithreadInfo::set_thread_limit(500);
   try
     {
       std::cout.precision(5);
 
       // Run Laplace problem for boundary mapping degrees <= (3)
       for (unsigned int poly_degree=1; poly_degree<=3; ++poly_degree)
-        current::LaplaceProblem<2>(poly_degree).run();
+	for(int k=0;k<3;k++)        
+            current::LaplaceProblem<2>(poly_degree).run();
     }
   catch (std::exception &exc)
     {

@@ -236,7 +236,7 @@ namespace current
     triangulation.set_manifold (0, boundary);
 
     // Refine until n_active_cells > (some number TBD)
-    while (triangulation.n_active_cells() < 10000)
+    while (triangulation.n_active_cells() < 100000)
 	triangulation.refine_global(1);    
 
     setup_system();
@@ -246,6 +246,7 @@ namespace current
     table_out.set_precision("|u|_1", 6);
     table_out.set_precision("error", 6);
     table_out.set_precision("elapsed CPU time (sec)",10);
+    table_out.set_precision("elapsed Wall time (sec)",10);
     table_out.write_text (std::cout);
     std::cout << std::endl;
   }
@@ -255,14 +256,16 @@ namespace current
 // Execute
 int main()
 {
-  dealii::MultithreadInfo::set_thread_limit(48);
+  // Some arbitrarily large number
+  dealii::MultithreadInfo::set_thread_limit(500);
   try
     {
       std::cout.precision(5);
 
       // Run Laplace problem for boundary mapping degrees <= (3)
       for (unsigned int poly_degree=1; poly_degree<=3; ++poly_degree)
-        current::LaplaceProblem<2>(poly_degree).run();
+	for(int k=0;k<3;k++)        
+            current::LaplaceProblem<2>(poly_degree).run();
     }
   catch (std::exception &exc)
     {
