@@ -1,7 +1,7 @@
 #! /bin/bash
-#PBS -l walltime=00:05:00
-#PBS -l nodes=1:ppn=8
-#PBS -W group_list=blueridge
+#PBS -l walltime=01:00:00
+#PBS -l nodes=1:ppn=1
+#PBS -W group_list=newriver
 #PBS -q open_q
 #PBS -j oe
 
@@ -16,6 +16,8 @@ module load lua
 module load python
 module load boost
 module load phdf5
+module load hdf5
+module load netcdf
 module load p4est
 module load trilinos
 module load dealii
