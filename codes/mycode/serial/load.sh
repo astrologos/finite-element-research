@@ -17,6 +17,7 @@ module load python
 module load boost
 module load phdf5
 module load hdf5
+module load netcdf
 module load p4est
 module load trilinos
 module load dealii
