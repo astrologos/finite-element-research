@@ -1,0 +1,136 @@
+[100%] Switch CMAKE_BUILD_TYPE to Release
+-- Autopilot invoked
+-- Run   $ make info  to print a detailed help message
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jack/research/fem-research/codes/mycode/parallel
+Scanning dependencies of target mark
+[ 50%] Building CXX object CMakeFiles/mark.dir/mark.cc.o
+[100%] Linking CXX executable mark
+[100%] Built target mark
+Built target release
+[ 66%] Built target mark
+[100%] Run mark with Release configuration
+
+Starting run with 1 threads::
+Using mapping with degree 1:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in CG (sec), elapsed Wall time in CG (sec),  |u|_1,    error;   
+  1280,                                  0.001083,                                   0.001525,                     0.002333,                      0.002335, 1.252176, 0.001138; 
+  5120,                                  0.005996,                                   0.005998,                     0.015877,                      0.015879, 1.253011, 0.000304; 
+ 20480,                                  0.026340,                                   0.026342,                     0.141284,                      0.141541, 1.253241, 0.000073; 
+ 81920,                                  0.133352,                                   0.141578,                     1.192287,                      1.192710, 1.253297, 0.000017; 
+327680,                                  0.858355,                                   0.866340,                    10.514423,                     10.515234, 1.253310, 0.000004; 
+
+Using mapping with degree 2:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in CG (sec), elapsed Wall time in CG (sec),  |u|_1,    error;   
+  1280,                                  0.001386,                                   0.001429,                     0.002292,                      0.002293, 1.252572, 0.000742; 
+  5120,                                  0.005597,                                   0.005622,                     0.015826,                      0.015827, 1.253129, 0.000185; 
+ 20480,                                  0.025753,                                   0.025803,                     0.142793,                      0.142800, 1.253268, 0.000046; 
+ 81920,                                  0.135294,                                   0.135317,                     1.217505,                      1.217650, 1.253303, 0.000011; 
+327680,                                  0.862814,                                   0.870843,                    11.361484,                     11.362446, 1.253311, 0.000003; 
+
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in CG (sec), elapsed Wall time in CG (sec),  |u|_1,    error;   
+  1280,                                  0.001539,                                   0.001585,                     0.002503,                      0.002504, 1.252579, 0.000735; 
+  5120,                                  0.006090,                                   0.006142,                     0.017793,                      0.017794, 1.253130, 0.000184; 
+ 20480,                                  0.028906,                                   0.028914,                     0.162556,                      0.162562, 1.253268, 0.000046; 
+ 81920,                                  0.149524,                                   0.153572,                     1.363474,                      1.367588, 1.253303, 0.000011; 
+327680,                                  0.836503,                                   0.848575,                    11.565409,                     11.570859, 1.253311, 0.000003; 
+
+
+Starting run with 2 threads::
+Using mapping with degree 1:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in CG (sec), elapsed Wall time in CG (sec),  |u|_1,    error;   
+  1280,                                  0.001524,                                   0.001566,                     0.002526,                      0.002528, 1.252176, 0.001138; 
+  5120,                                  0.006330,                                   0.006384,                     0.018023,                      0.018024, 1.253011, 0.000304; 
+ 20480,                                  0.029845,                                   0.029890,                     0.161569,                      0.161575, 1.253241, 0.000073; 
+ 81920,                                  0.150264,                                   0.154236,                     1.367149,                      1.367202, 1.253297, 0.000017; 
+327680,                                  0.858542,                                   0.858637,                    11.544583,                     11.553464, 1.253310, 0.000004; 
+
+Using mapping with degree 2:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in CG (sec), elapsed Wall time in CG (sec),  |u|_1,    error;   
+  1280,                                  0.001599,                                   0.001608,                     0.002490,                      0.002494, 1.252572, 0.000742; 
+  5120,                                  0.006413,                                   0.006415,                     0.017993,                      0.018006, 1.253129, 0.000185; 
+ 20480,                                  0.029048,                                   0.029075,                     0.163005,                      0.163011, 1.253268, 0.000046; 
+ 81920,                                  0.161616,                                   0.161622,                     1.407026,                      1.407157, 1.253303, 0.000011; 
+327680,                                  0.834655,                                   0.846812,                    11.743786,                     11.748763, 1.253311, 0.000003; 
+
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in CG (sec), elapsed Wall time in CG (sec),  |u|_1,    error;   
+  1280,                                  0.001555,                                   0.001598,                     0.002519,                      0.002521, 1.252579, 0.000735; 
+  5120,                                  0.006332,                                   0.006387,                     0.018035,                      0.018037, 1.253130, 0.000184; 
+ 20480,                                  0.029377,                                   0.029412,                     0.161075,                      0.161083, 1.253268, 0.000046; 
+ 81920,                                  0.153697,                                   0.153751,                     1.367430,                      1.367520, 1.253303, 0.000011; 
+327680,                                  0.855412,                                   0.871423,                    11.545213,                     11.545409, 1.253311, 0.000003; 
+
+
+Starting run with 4 threads::
+Using mapping with degree 1:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in CG (sec), elapsed Wall time in CG (sec),  |u|_1,    error;   
+  1280,                                  0.001530,                                   0.001531,                     0.002491,                      0.002494, 1.252176, 0.001138; 
+  5120,                                  0.006304,                                   0.006358,                     0.018030,                      0.018039, 1.253011, 0.000304; 
+ 20480,                                  0.031805,                                   0.031809,                     0.162919,                      0.162925, 1.253241, 0.000073; 
+ 81920,                                  0.166162,                                   0.166176,                     1.376804,                      1.376827, 1.253297, 0.000017; 
+327680,                                  0.916105,                                   0.920532,                    11.571598,                     11.573058, 1.253310, 0.000004; 
+
+Using mapping with degree 2:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in CG (sec), elapsed Wall time in CG (sec),  |u|_1,    error;   
+  1280,                                  0.001617,                                   0.001626,                     0.002486,                      0.002491, 1.252572, 0.000742; 
+  5120,                                  0.006406,                                   0.006511,                     0.018020,                      0.018021, 1.253129, 0.000185; 
+ 20480,                                  0.030274,                                   0.030341,                     0.163772,                      0.163779, 1.253268, 0.000046; 
+ 81920,                                  0.160413,                                   0.160438,                     1.360723,                      1.360916, 1.253303, 0.000011; 
+327680,                                  0.857065,                                   0.861005,                    11.628234,                     11.628874, 1.253311, 0.000003; 
+
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in CG (sec), elapsed Wall time in CG (sec),  |u|_1,    error;   
+  1280,                                  0.001632,                                   0.001683,                     0.002597,                      0.002598, 1.252579, 0.000735; 
+  5120,                                  0.006397,                                   0.006400,                     0.018015,                      0.018031, 1.253130, 0.000184; 
+ 20480,                                  0.031159,                                   0.031162,                     0.163184,                      0.163190, 1.253268, 0.000046; 
+ 81920,                                  0.150957,                                   0.150963,                     1.400900,                      1.400952, 1.253303, 0.000011; 
+327680,                                  0.850642,                                   0.858772,                    11.278702,                     11.279773, 1.253311, 0.000003; 
+
+
+Starting run with 8 threads::
+Using mapping with degree 1:
+============================
+<------------------------------>
+<........................CMakeFiles/run.dir/build.make:57: recipe for target 'CMakeFiles/run' failed
+CMakeFiles/Makefile2:131: recipe for target 'CMakeFiles/run.dir/all' failed
+CMakeFiles/Makefile2:138: recipe for target 'CMakeFiles/run.dir/rule' failed
+Makefile:144: recipe for target 'run' failed

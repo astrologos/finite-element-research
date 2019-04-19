@@ -66,7 +66,7 @@
 #include <deal.II/lac/solver_richardson.h>
 #include <deal.II/dofs/dof_renumbering.h>
 #include <deal.II/lac/sparse_mic.h>
-#include <deal.II/lac/sparse_direct.h>
+
 
 
 
@@ -232,11 +232,10 @@ namespace current
   void LaplaceProblem<dim>::solve()
   {
     SolverControl           solver_control(100000, 1e-10);
-    SolverCG<> cg(solver_control);
-    SparseDirectUMFPACK preconditioner();
+    SolverQMRS<>              QMRS(solver_control);
 
     std:: cout << ".." << std::flush;
-    //SparseILU<double> preconditioner;
+    SparseILU<double> preconditioner;
     //PreconditionChebyshev<> preconditioner;
     Timer timer0;
     timer0.start();
@@ -249,10 +248,10 @@ namespace current
     // ----------------- Time -----------------
     Timer timer1;
     timer1.start();
-    solver.solve(A, x, b);
+    QMRS.solve(A, x, b, preconditioner);
     timer1.stop();
-    table_out.add_value("elapsed CPU time in SparseDirectUMFPACK (sec),",std::to_string(timer1())+",");      
-    table_out.add_value("elapsed Wall time in SparseDirectUMFPACK (sec),",std::to_string(timer1.wall_time())+","); 
+    table_out.add_value("elapsed CPU time in QMRS (sec),",std::to_string(timer1())+",");      
+    table_out.add_value("elapsed Wall time in QMRS (sec),",std::to_string(timer1.wall_time())+","); 
     std:: cout << ".." << std::flush;
   }
 
@@ -281,8 +280,8 @@ namespace current
     table_out.set_precision("error;", 6);
     table_out.set_precision("elapsed CPU time in Preconditioning (sec),",3);
     table_out.set_precision("elapsed Wall time in Preconditioning (sec),",3);
-    table_out.set_precision("elapsed CPU time in SparseDirectUMFPACK (sec),",3);
-    table_out.set_precision("elapsed Wall time in SparseDirectUMFPACK (sec),",3);
+    table_out.set_precision("elapsed CPU time in QMRS (sec),",3);
+    table_out.set_precision("elapsed Wall time in QMRS (sec),",3);
     table_out.write_text(std::cout);
     std::cout << std::endl;
   }

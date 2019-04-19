@@ -1,0 +1,69 @@
+[100%] Switch CMAKE_BUILD_TYPE to Release
+-- Autopilot invoked
+-- Run   $ make info  to print a detailed help message
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jack/research/fem-research/codes/mycode/parallel
+[100%] Built target mark
+Built target release
+[ 66%] Built target mark
+[100%] Run mark with Release configuration
+
+Starting run with 1 threads::
+Using mapping with degree 1:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in GMRES (sec), elapsed Wall time in GMRES (sec),  |u|_1,    error;   
+  1280,                                  0.000247,                                   0.000334,                        0.003508,                         0.003509, 1.252176, 0.001138; 
+  5120,                                  0.001343,                                   0.001734,                        0.029504,                         0.029831, 1.253011, 0.000304; 
+ 20480,                                  0.010894,                                   0.010896,                        0.353830,                         0.353847, 1.253241, 0.000073; 
+ 81920,                                  0.077784,                                   0.077933,                        4.307950,                         4.311971, 1.253297, 0.000017; 
+327680,                                  0.682027,                                   0.689970,                       65.867880,                        65.889237, 1.253310, 0.000004; 
+
+Using mapping with degree 2:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in GMRES (sec), elapsed Wall time in GMRES (sec),  |u|_1,    error;   
+  1280,                                  0.000329,                                   0.000333,                        0.003744,                         0.003745, 1.252572, 0.000742; 
+  5120,                                  0.001748,                                   0.001761,                        0.033744,                         0.033747, 1.253129, 0.000185; 
+ 20480,                                  0.011617,                                   0.011619,                        0.404516,                         0.404528, 1.253268, 0.000046; 
+ 81920,                                  0.084233,                                   0.084239,                        4.898216,                         4.898342, 1.253303, 0.000011; 
+327680,                                  0.683913,                                   0.687998,                       66.831121,                        66.841815, 1.253311, 0.000003; 
+
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in GMRES (sec), elapsed Wall time in GMRES (sec),  |u|_1,    error;   
+  1280,                                  0.000324,                                   0.000326,                        0.003774,                         0.003783, 1.252579, 0.000735; 
+  5120,                                  0.001697,                                   0.001708,                        0.033490,                         0.033535, 1.253130, 0.000184; 
+ 20480,                                  0.011595,                                   0.011598,                        0.404950,                         0.404963, 1.253268, 0.000046; 
+ 81920,                                  0.086017,                                   0.086021,                        4.889142,                         4.889469, 1.253303, 0.000011; 
+327680,                                  0.676592,                                   0.684601,                       66.745195,                        66.758121, 1.253311, 0.000003; 
+
+
+Starting run with 2 threads::
+Using mapping with degree 1:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in GMRES (sec), elapsed Wall time in GMRES (sec),  |u|_1,    error;   
+  1280,                                  0.000426,                                   0.000327,                        0.002954,                         0.003484, 1.252176, 0.001138; 
+  5120,                                  0.001904,                                   0.001792,                        0.041065,                         0.032030, 1.253011, 0.000304; 
+ 20480,                                  0.012167,                                   0.011993,                        0.551040,                         0.371295, 1.253241, 0.000073; 
+ 81920,                                  0.076268,                                   0.075768,                        6.626609,                         4.459768, 1.253297, 0.000017; 
+327680,                                  0.679705,                                   0.681932,                       98.579495,                        64.536348, 1.253310, 0.000004; 
+
+Using mapping with degree 2:
+============================
+<------------------------------>
+<............................CMakeFiles/run.dir/build.make:57: recipe for target 'CMakeFiles/run' failed
+CMakeFiles/Makefile2:131: recipe for target 'CMakeFiles/run.dir/all' failed
+CMakeFiles/Makefile2:138: recipe for target 'CMakeFiles/run.dir/rule' failed
+Makefile:144: recipe for target 'run' failed

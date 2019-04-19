@@ -1,0 +1,43 @@
+[100%] Switch CMAKE_BUILD_TYPE to Release
+-- Autopilot invoked
+-- Run   $ make info  to print a detailed help message
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jack/research/fem-research/codes/mycode/parallel
+[100%] Built target mark
+Built target release
+[ 66%] Built target mark
+[100%] Run mark with Release configuration
+
+Starting run with 1 threads::
+Using mapping with degree 1:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.000248,                                   0.000331,                       0.003491,                        0.003492,   26.099600,   24.846286; 
+  5120,                                  0.001366,                                   0.001707,                       0.027119,                        0.027121,   82.625160,   81.371846; 
+ 20480,                                  0.010890,                                   0.010892,                       0.399607,                        0.399643,  234.093414,  232.840100; 
+ 81920,                                  0.077409,                                   0.077548,                       4.120277,                        4.120503,  720.639282,  719.385968; 
+327680,                                  0.680557,                                   0.688664,                      86.476883,                       86.484259, 1963.902100, 1962.648785; 
+
+Using mapping with degree 2:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.000324,                                   0.000326,                       0.003615,                        0.003617,   26.061081,   24.807767; 
+  5120,                                  0.001778,                                   0.001780,                       0.036154,                        0.036164,   82.530205,   81.276891; 
+ 20480,                                  0.011656,                                   0.011658,                       0.436676,                        0.436688,  233.933121,  232.679807; 
+ 81920,                                  0.084613,                                   0.084617,                       4.736906,                        4.737023,  720.343689,  719.090375; 
+327680,                                  0.672895,                                   0.684967,                     138.426636,                      138.440625, 1963.462646, 1962.209332; 
+
+Using mapping with degree 3:
+============================
+<------------------------------>
+<............................CMakeFiles/run.dir/build.make:57: recipe for target 'CMakeFiles/run' failed
+CMakeFiles/Makefile2:131: recipe for target 'CMakeFiles/run.dir/all' failed
+CMakeFiles/Makefile2:138: recipe for target 'CMakeFiles/run.dir/rule' failed
+Makefile:144: recipe for target 'run' failed
