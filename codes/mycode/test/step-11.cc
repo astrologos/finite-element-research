@@ -454,7 +454,7 @@ triangulation.refine_global(4);
 // several of the previous examples, so probably needs no more explanation.
 int main ()
 {
-dealii::MultithreadInfo::set_thread_limit(48);
+dealii::MultithreadInfo::set_thread_limit(1);
   try
     {
       std::cout.precision(5);
