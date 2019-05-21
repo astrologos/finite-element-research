@@ -153,6 +153,8 @@ namespace current
     // Then reinitialize matrix with boundary value constraints
     sparsity.copy_from(dsp);
     A.reinit(sparsity);
+    std::ofstream out ("sparsity_pattern1.svg");
+    sparsity_pattern.print_svg (out);
   }
 
 

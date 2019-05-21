@@ -9,6 +9,8 @@
 /home/jack/research/fem-research/codes/mycode/parallel/mark.cc
 string
 -
+deal.II/dofs/dof_renumbering.h
+-
 deal.II/base/quadrature_lib.h
 -
 deal.II/base/function.h
@@ -59,8 +61,6 @@ deal.II/lac/dynamic_sparsity_pattern.h
 -
 algorithm
 -
-iostream
--
 iomanip
 -
 cmath
@@ -73,20 +73,20 @@ deal.II/base/timer.h
 -
 deal.II/lac/sparse_ilu.h
 -
-deal.II/lac/solver_bicgstab.h
+deal.II/lac/trilinos_sparse_matrix.h
 -
-deal.II/lac/solver_gmres.h
+deal.II/lac/trilinos_precondition.h
 -
-deal.II/lac/solver_minres.h
+deal.II/base/utilities.h
 -
-deal.II/lac/solver_qmrs.h
+deal.II/lac/trilinos_solver.h
 -
-deal.II/lac/solver_richardson.h
+iostream
 -
-deal.II/dofs/dof_renumbering.h
+fstream
 -
-deal.II/lac/sparse_mic.h
+memory
 -
-deal.II/lac/sparse_direct.h
+array
 -
 

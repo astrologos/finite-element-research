@@ -153,6 +153,8 @@ namespace current
     // Then reinitialize matrix with boundary value constraints
     sparsity.copy_from(dsp);
     A.reinit(sparsity);
+    std::ofstream out ("sparsity_pattern.svg");
+    sparsity.print_svg (out);
   }
 
 
@@ -280,7 +282,7 @@ int main()
 {
     // RUN ON MACHINE WITH 2 8-CORE CPUS WITH SHARED MEMORY, 2 THREADS PER CORE,
     // I.E. 32 THREAD CAPACITY
-    for (int threads = 1; threads<33; threads*=2) {
+    for (int threads = 1; threads<32; threads*=2) {
 
         dealii::MultithreadInfo::set_thread_limit(threads);
         std:: cout << "\nStarting run with " << threads <<  " threads::\n";    
