@@ -1,6 +1,6 @@
 # FEM Research
 
-Optimizing deal.ii routines for parallel performance.
+Optimizing preconditioners for CGM performance in FEM.
 
 Notes:
 - CMakeLists.txt has been altered to take any deal.ii code named "mark.cc"
