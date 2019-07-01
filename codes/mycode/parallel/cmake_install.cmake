@@ -1,4 +1,4 @@
-# Install script for directory: /home/jack/research/fem-research/codes/mycode/parallel
+# Install script for directory: /home/ajack/fem-research/codes/mycode/parallel
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/jack/research/fem-research/codes/mycode/parallel/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ajack/fem-research/codes/mycode/parallel/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

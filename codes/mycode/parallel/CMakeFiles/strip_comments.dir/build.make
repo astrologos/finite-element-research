@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jack/research/fem-research/codes/mycode/parallel
+CMAKE_SOURCE_DIR = /home/ajack/fem-research/codes/mycode/parallel
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jack/research/fem-research/codes/mycode/parallel
+CMAKE_BINARY_DIR = /home/ajack/fem-research/codes/mycode/parallel
 
 # Utility rule file for strip_comments.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/jack/research/fem-research/codes/mycode/parallel
 include CMakeFiles/strip_comments.dir/progress.make
 
 CMakeFiles/strip_comments:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jack/research/fem-research/codes/mycode/parallel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "strip comments"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "strip comments"
 	/usr/bin/perl -pi -e 's#^[ \t]*//.*\n##g;' mark.cc
 
 strip_comments: CMakeFiles/strip_comments
@@ -72,6 +72,6 @@ CMakeFiles/strip_comments.dir/clean:
 .PHONY : CMakeFiles/strip_comments.dir/clean
 
 CMakeFiles/strip_comments.dir/depend:
-	cd /home/jack/research/fem-research/codes/mycode/parallel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel/CMakeFiles/strip_comments.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ajack/fem-research/codes/mycode/parallel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel/CMakeFiles/strip_comments.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/strip_comments.dir/depend
 

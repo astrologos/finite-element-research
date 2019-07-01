@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jack/research/fem-research/codes/mycode/parallel
+CMAKE_SOURCE_DIR = /home/ajack/fem-research/codes/mycode/parallel
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jack/research/fem-research/codes/mycode/parallel
+CMAKE_BINARY_DIR = /home/ajack/fem-research/codes/mycode/parallel
 
 # Include any dependencies generated for this target.
 include CMakeFiles/mark.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/mark.dir/flags.make
 
 CMakeFiles/mark.dir/mark.cc.o: CMakeFiles/mark.dir/flags.make
 CMakeFiles/mark.dir/mark.cc.o: mark.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jack/research/fem-research/codes/mycode/parallel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mark.dir/mark.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mark.dir/mark.cc.o -c /home/jack/research/fem-research/codes/mycode/parallel/mark.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mark.dir/mark.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mark.dir/mark.cc.o -c /home/ajack/fem-research/codes/mycode/parallel/mark.cc
 
 CMakeFiles/mark.dir/mark.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mark.dir/mark.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jack/research/fem-research/codes/mycode/parallel/mark.cc > CMakeFiles/mark.dir/mark.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ajack/fem-research/codes/mycode/parallel/mark.cc > CMakeFiles/mark.dir/mark.cc.i
 
 CMakeFiles/mark.dir/mark.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mark.dir/mark.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jack/research/fem-research/codes/mycode/parallel/mark.cc -o CMakeFiles/mark.dir/mark.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ajack/fem-research/codes/mycode/parallel/mark.cc -o CMakeFiles/mark.dir/mark.cc.s
 
 CMakeFiles/mark.dir/mark.cc.o.requires:
 
@@ -90,122 +90,9 @@ mark_EXTERNAL_OBJECTS =
 
 mark: CMakeFiles/mark.dir/mark.cc.o
 mark: CMakeFiles/mark.dir/build.make
-mark: /usr/lib/x86_64-linux-gnu/libdeal.ii.so.8.5.1
-mark: /usr/lib/x86_64-linux-gnu/libbz2.so
-mark: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_usempif08.so
-mark: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_usempi_ignore_tkr.so
-mark: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_mpifh.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_pike-blackbox.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_trilinoscouplings.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_piro.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_rol.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_stokhos_muelu.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_stokhos_ifpack2.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_stokhos_amesos2.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_stokhos_tpetra.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_stokhos_sacado.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_stokhos.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_rythmos.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_muelu-adapters.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_muelu-interface.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_muelu.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_moertel.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_locathyra.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_locaepetra.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_localapack.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_loca.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_noxepetra.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_noxlapack.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_nox.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_phalanx.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_intrepid.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_teko.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_stratimikos.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_stratimikosbelos.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_stratimikosaztecoo.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_stratimikosamesos.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_stratimikosml.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_stratimikosifpack.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_ifpack2-adapters.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_ifpack2.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_anasazitpetra.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_ModeLaplace.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_anasaziepetra.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_anasazi.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_komplex.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_amesos2.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_shylu.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_belostpetra.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_belosepetra.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_belos.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_ml.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_ifpack.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_zoltan2.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_pamgen_extras.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_pamgen.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_amesos.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_galeri-xpetra.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_galeri-epetra.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_aztecoo.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_dpliris.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_isorropia.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_optipack.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_xpetra-sup.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_xpetra.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_thyratpetra.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_thyraepetraext.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_thyraepetra.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_thyracore.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_epetraext.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_trilinosss.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_tpetraext.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_tpetrainout.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_tpetra.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_kokkostsqr.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_tpetraclassiclinalg.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_tpetraclassicnodeapi.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_tpetraclassic.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_triutils.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_globipack.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_shards.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_zoltan.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_epetra.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_sacado.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_rtop.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_kokkoskernels.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_teuchoskokkoscomm.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_teuchoskokkoscompat.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosremainder.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosnumerics.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_teuchoscomm.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosparameterlist.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_teuchoscore.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_kokkosalgorithms.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_kokkoscontainers.so
-mark: /usr/lib/x86_64-linux-gnu/libtrilinos_kokkoscore.so
-mark: /usr/lib/x86_64-linux-gnu/libsmumps.so
-mark: /usr/lib/x86_64-linux-gnu/libdmumps.so
-mark: /usr/lib/x86_64-linux-gnu/libcmumps.so
-mark: /usr/lib/x86_64-linux-gnu/libzmumps.so
-mark: /usr/lib/x86_64-linux-gnu/libpord.so
-mark: /usr/lib/x86_64-linux-gnu/libmumps_common.so
-mark: /usr/lib/x86_64-linux-gnu/hdf5/openmpi/libhdf5.so
+mark: /opt/deal.ii/lib/libdeal_II.so.9.1.0
 mark: /usr/lib/x86_64-linux-gnu/libtbb.so
 mark: /usr/lib/x86_64-linux-gnu/libz.so
-mark: /usr/lib/x86_64-linux-gnu/libptscotch.so
-mark: /usr/lib/x86_64-linux-gnu/libptscotcherr.so
-mark: /usr/lib/x86_64-linux-gnu/libscotch.so
-mark: /usr/lib/x86_64-linux-gnu/libscotcherr.so
-mark: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so
-mark: /usr/lib/x86_64-linux-gnu/libumfpack.so
-mark: /usr/lib/x86_64-linux-gnu/libcholmod.so
-mark: /usr/lib/x86_64-linux-gnu/libccolamd.so
-mark: /usr/lib/x86_64-linux-gnu/libcolamd.so
-mark: /usr/lib/x86_64-linux-gnu/libcamd.so
-mark: /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so
-mark: /usr/lib/x86_64-linux-gnu/libamd.so
-mark: /usr/lib/x86_64-linux-gnu/libparpack.so
-mark: /usr/lib/x86_64-linux-gnu/libarpack.so
 mark: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
 mark: /usr/lib/x86_64-linux-gnu/libboost_serialization.so
 mark: /usr/lib/x86_64-linux-gnu/libboost_system.so
@@ -214,46 +101,18 @@ mark: /usr/lib/x86_64-linux-gnu/libboost_regex.so
 mark: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
 mark: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
 mark: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-mark: /usr/lib/x86_64-linux-gnu/libgsl.so
-mark: /usr/lib/x86_64-linux-gnu/libgslcblas.so
-mark: /usr/lib/x86_64-linux-gnu/hdf5/openmpi/lib/lib/libhdf5_hl.so
-mark: /usr/lib/x86_64-linux-gnu/hdf5/openmpi/lib/lib/libhdf5.so
-mark: /usr/lib/x86_64-linux-gnu/libmuparser.so
-mark: /usr/lib/x86_64-linux-gnu/libnetcdf_c++.so
-mark: /usr/lib/x86_64-linux-gnu/libnetcdf.so
-mark: /usr/lib/x86_64-linux-gnu/libTKBO.so
-mark: /usr/lib/x86_64-linux-gnu/libTKBool.so
-mark: /usr/lib/x86_64-linux-gnu/libTKBRep.so
-mark: /usr/lib/x86_64-linux-gnu/libTKernel.so
-mark: /usr/lib/x86_64-linux-gnu/libTKFeat.so
-mark: /usr/lib/x86_64-linux-gnu/libTKFillet.so
-mark: /usr/lib/x86_64-linux-gnu/libTKG2d.so
-mark: /usr/lib/x86_64-linux-gnu/libTKG3d.so
-mark: /usr/lib/x86_64-linux-gnu/libTKGeomAlgo.so
-mark: /usr/lib/x86_64-linux-gnu/libTKGeomBase.so
-mark: /usr/lib/x86_64-linux-gnu/libTKHLR.so
-mark: /usr/lib/x86_64-linux-gnu/libTKIGES.so
-mark: /usr/lib/x86_64-linux-gnu/libTKMath.so
-mark: /usr/lib/x86_64-linux-gnu/libTKMesh.so
-mark: /usr/lib/x86_64-linux-gnu/libTKOffset.so
-mark: /usr/lib/x86_64-linux-gnu/libTKPrim.so
-mark: /usr/lib/x86_64-linux-gnu/libTKShHealing.so
-mark: /usr/lib/x86_64-linux-gnu/libTKSTEP.so
-mark: /usr/lib/x86_64-linux-gnu/libTKSTEPAttr.so
-mark: /usr/lib/x86_64-linux-gnu/libTKSTEPBase.so
-mark: /usr/lib/x86_64-linux-gnu/libTKSTEP209.so
-mark: /usr/lib/x86_64-linux-gnu/libTKSTL.so
-mark: /usr/lib/x86_64-linux-gnu/libTKTopAlgo.so
-mark: /usr/lib/x86_64-linux-gnu/libTKXSBase.so
-mark: /usr/lib/x86_64-linux-gnu/libp4est.so
-mark: /usr/lib/x86_64-linux-gnu/libsc.so
+mark: /usr/lib/x86_64-linux-gnu/libumfpack.so
+mark: /usr/lib/x86_64-linux-gnu/libcholmod.so
+mark: /usr/lib/x86_64-linux-gnu/libccolamd.so
+mark: /usr/lib/x86_64-linux-gnu/libcolamd.so
+mark: /usr/lib/x86_64-linux-gnu/libcamd.so
+mark: /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so
+mark: /usr/lib/x86_64-linux-gnu/libamd.so
+mark: /usr/lib/x86_64-linux-gnu/libmetis.so
 mark: /usr/lib/x86_64-linux-gnu/liblapack.so
 mark: /usr/lib/x86_64-linux-gnu/libblas.so
-mark: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so
-mark: /usr/lib/x86_64-linux-gnu/libslepc.so
-mark: /usr/lib/x86_64-linux-gnu/libpetsc.so
 mark: CMakeFiles/mark.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jack/research/fem-research/codes/mycode/parallel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mark"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mark"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mark.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -270,6 +129,6 @@ CMakeFiles/mark.dir/clean:
 .PHONY : CMakeFiles/mark.dir/clean
 
 CMakeFiles/mark.dir/depend:
-	cd /home/jack/research/fem-research/codes/mycode/parallel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel/CMakeFiles/mark.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ajack/fem-research/codes/mycode/parallel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel/CMakeFiles/mark.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/mark.dir/depend
 

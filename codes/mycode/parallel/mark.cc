@@ -24,9 +24,10 @@
  */
 
 /*
- * NOTE: Built-in ILU preconditioner is not optimized for parallelism.
+ * NOTE: Using trilinos AMG preconditioner
  */
 #include <string>
+#include <deal.II/dofs/dof_renumbering.h>
 #include <deal.II/base/quadrature_lib.h>
 #include <deal.II/base/function.h>
 #include <deal.II/base/logstream.h>
@@ -52,14 +53,21 @@
 #include <deal.II/numerics/matrix_tools.h>
 #include <deal.II/lac/dynamic_sparsity_pattern.h>
 #include <algorithm>
-#include <iostream>
 #include <iomanip>
 #include <cmath>
 #include <deal.II/base/multithread_info.h>
 #include <deal.II/base/work_stream.h>
 #include <deal.II/base/timer.h>
 #include <deal.II/lac/sparse_ilu.h>
-#include <deal.II/dofs/dof_renumbering.h>
+#include <deal.II/lac/trilinos_sparse_matrix.h>
+#include <deal.II/lac/trilinos_precondition.h>
+#include <deal.II/base/utilities.h>
+#include <deal.II/lac/trilinos_solver.h>
+#include <iostream>
+#include <fstream>
+#include <memory>
+#include <array>
+
 
 // The last step is as in all previous programs:
 namespace current
@@ -91,6 +99,7 @@ namespace current
     Vector<double>       b;
 
     TableHandler         table_out;
+    TrilinosWrappers::SparseMatrix trilinosA;
   };
 
 
@@ -143,18 +152,20 @@ namespace current
     mvcs.close();
 
     // Use dynamic sparsity patterns
+    // Use Cuthill-McKee method to reduce bandwidth
     DoFRenumbering::Cuthill_McKee (dof_handler);
     DynamicSparsityPattern dsp(dof_handler.n_dofs(),
                                 dof_handler.n_dofs());
     DoFTools::make_sparsity_pattern(dof_handler, dsp);
     mvcs.condense(dsp);
 
-    // Copy new sparsity pattern from dis
+    // Copy new sparsity pattern from dsp
     // Then reinitialize matrix with boundary value constraints
     sparsity.copy_from(dsp);
     A.reinit(sparsity);
-    std::ofstream out ("sparsity_pattern.svg");
-    sparsity.print_svg (out);
+    std::ofstream out ("sparsity_pattern1.svg");
+    sparsity.print_svg(out);
+    
   }
 
 
@@ -220,14 +231,15 @@ namespace current
   template <int dim>
   void LaplaceProblem<dim>::solve()
   {
-    SolverControl           solver_control(100000, 1e-10);
-    SolverCG<>              cg(solver_control);
+    SolverControl                       solver_control(100000, 1e-10);
+    TrilinosWrappers::SolverCG          cg(solver_control);
+    trilinosA.reinit(A);
 
     std:: cout << ".." << std::flush;
-    SparseILU<double> preconditioner;
+    TrilinosWrappers::PreconditionAMG preconditioner;
     Timer timer0;
     timer0.start();
-    preconditioner.initialize(A);
+    preconditioner.initialize(trilinosA);
     timer0.stop();
     std:: cout << ".." << std::flush;
     table_out.add_value("elapsed CPU time in Preconditioning (sec),",std::to_string(timer0())+",");      
@@ -236,7 +248,7 @@ namespace current
     // ----------------- Time -----------------
     Timer timer1;
     timer1.start();
-    cg.solve(A, x, b, preconditioner);
+    cg.solve(trilinosA, x, b, preconditioner);
     timer1.stop();
     table_out.add_value("elapsed CPU time in CG (sec),",std::to_string(timer1())+",");      
     table_out.add_value("elapsed Wall time in CG (sec),",std::to_string(timer1.wall_time())+","); 
@@ -278,11 +290,18 @@ namespace current
 
 
 // Execute
-int main()
+int main(int argc, char **argv)
 {
+    using namespace dealii;
+    using namespace current;
+    
+    Utilities::MPI::MPI_InitFinalize mpi_initialization (argc, argv,
+                                                           numbers::invalid_unsigned_int);
+    AssertThrow(Utilities::MPI::n_mpi_processes(MPI_COMM_WORLD)==1,
+        ExcMessage("This program can only be run in serial"));
     // RUN ON MACHINE WITH 2 8-CORE CPUS WITH SHARED MEMORY, 2 THREADS PER CORE,
     // I.E. 32 THREAD CAPACITY
-    for (int threads = 1; threads<32; threads*=2) {
+    for (int threads = 1; threads<33; threads*=2) {
 
         dealii::MultithreadInfo::set_thread_limit(threads);
         std:: cout << "\nStarting run with " << threads <<  " threads::\n";    

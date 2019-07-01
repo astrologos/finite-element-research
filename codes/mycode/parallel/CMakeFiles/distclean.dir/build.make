@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jack/research/fem-research/codes/mycode/parallel
+CMAKE_SOURCE_DIR = /home/ajack/fem-research/codes/mycode/parallel
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jack/research/fem-research/codes/mycode/parallel
+CMAKE_BINARY_DIR = /home/ajack/fem-research/codes/mycode/parallel
 
 # Utility rule file for distclean.
 
@@ -54,11 +54,11 @@ CMAKE_BINARY_DIR = /home/jack/research/fem-research/codes/mycode/parallel
 include CMakeFiles/distclean.dir/progress.make
 
 CMakeFiles/distclean:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jack/research/fem-research/codes/mycode/parallel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "distclean invoked"
-	/usr/bin/cmake --build /home/jack/research/fem-research/codes/mycode/parallel --target clean
-	/usr/bin/cmake --build /home/jack/research/fem-research/codes/mycode/parallel --target runclean
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "distclean invoked"
+	/usr/bin/cmake --build /home/ajack/fem-research/codes/mycode/parallel --target clean
+	/usr/bin/cmake --build /home/ajack/fem-research/codes/mycode/parallel --target runclean
 	/usr/bin/cmake -E remove_directory CMakeFiles
-	/usr/bin/cmake -E remove CMakeCache.txt cmake_install.cmake Makefile
+	/usr/bin/cmake -E remove CMakeCache.txt cmake_install.cmake Makefile build.ninja rules.ninja .ninja_deps .ninja_log
 
 distclean: CMakeFiles/distclean
 distclean: CMakeFiles/distclean.dir/build.make
@@ -75,6 +75,6 @@ CMakeFiles/distclean.dir/clean:
 .PHONY : CMakeFiles/distclean.dir/clean
 
 CMakeFiles/distclean.dir/depend:
-	cd /home/jack/research/fem-research/codes/mycode/parallel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel/CMakeFiles/distclean.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ajack/fem-research/codes/mycode/parallel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel/CMakeFiles/distclean.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/distclean.dir/depend
 
