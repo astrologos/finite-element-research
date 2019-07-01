@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ajack/fem-research/codes/mycode/parallel
+CMAKE_SOURCE_DIR = /home/jack/research/fem-research/codes/mycode/parallel
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ajack/fem-research/codes/mycode/parallel
+CMAKE_BINARY_DIR = /home/jack/research/fem-research/codes/mycode/parallel
 
 # Utility rule file for release.
 
@@ -54,11 +54,9 @@ CMAKE_BINARY_DIR = /home/ajack/fem-research/codes/mycode/parallel
 include CMakeFiles/release.dir/progress.make
 
 CMakeFiles/release:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Switching CMAKE_BUILD_TYPE to Release"
-	/usr/bin/cmake -DCMAKE_BUILD_TYPE=Release /home/ajack/fem-research/codes/mycode/parallel
-	/usr/bin/cmake -E echo "***"
-	/usr/bin/cmake -E echo "*** Switched to Release mode. Now recompile with:  \$$ make"
-	/usr/bin/cmake -E echo "***"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jack/research/fem-research/codes/mycode/parallel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Switch CMAKE_BUILD_TYPE to Release"
+	/usr/bin/cmake -DCMAKE_BUILD_TYPE=Release /home/jack/research/fem-research/codes/mycode/parallel
+	/usr/bin/cmake --build /home/jack/research/fem-research/codes/mycode/parallel --target all
 
 release: CMakeFiles/release
 release: CMakeFiles/release.dir/build.make
@@ -75,6 +73,6 @@ CMakeFiles/release.dir/clean:
 .PHONY : CMakeFiles/release.dir/clean
 
 CMakeFiles/release.dir/depend:
-	cd /home/ajack/fem-research/codes/mycode/parallel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel/CMakeFiles/release.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jack/research/fem-research/codes/mycode/parallel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel/CMakeFiles/release.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/release.dir/depend
 

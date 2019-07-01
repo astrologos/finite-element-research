@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ajack/fem-research/codes/mycode/parallel
+CMAKE_SOURCE_DIR = /home/jack/research/fem-research/codes/mycode/parallel
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ajack/fem-research/codes/mycode/parallel
+CMAKE_BINARY_DIR = /home/jack/research/fem-research/codes/mycode/parallel
 
 # Utility rule file for run.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ajack/fem-research/codes/mycode/parallel
 include CMakeFiles/run.dir/progress.make
 
 CMakeFiles/run: mark
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Run mark with Release configuration"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jack/research/fem-research/codes/mycode/parallel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Run mark with Release configuration"
 	./mark
 
 run: CMakeFiles/run
@@ -72,6 +72,6 @@ CMakeFiles/run.dir/clean:
 .PHONY : CMakeFiles/run.dir/clean
 
 CMakeFiles/run.dir/depend:
-	cd /home/ajack/fem-research/codes/mycode/parallel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel/CMakeFiles/run.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jack/research/fem-research/codes/mycode/parallel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel/CMakeFiles/run.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/run.dir/depend
 

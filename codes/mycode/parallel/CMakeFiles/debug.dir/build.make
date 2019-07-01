@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ajack/fem-research/codes/mycode/parallel
+CMAKE_SOURCE_DIR = /home/jack/research/fem-research/codes/mycode/parallel
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ajack/fem-research/codes/mycode/parallel
+CMAKE_BINARY_DIR = /home/jack/research/fem-research/codes/mycode/parallel
 
 # Utility rule file for debug.
 
@@ -54,11 +54,9 @@ CMAKE_BINARY_DIR = /home/ajack/fem-research/codes/mycode/parallel
 include CMakeFiles/debug.dir/progress.make
 
 CMakeFiles/debug:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Switching CMAKE_BUILD_TYPE to Debug"
-	/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug /home/ajack/fem-research/codes/mycode/parallel
-	/usr/bin/cmake -E echo "***"
-	/usr/bin/cmake -E echo "*** Switched to Debug mode. Now recompile with:  \$$ make"
-	/usr/bin/cmake -E echo "***"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jack/research/fem-research/codes/mycode/parallel/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Switch CMAKE_BUILD_TYPE to Debug"
+	/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug /home/jack/research/fem-research/codes/mycode/parallel
+	/usr/bin/cmake --build /home/jack/research/fem-research/codes/mycode/parallel --target all
 
 debug: CMakeFiles/debug
 debug: CMakeFiles/debug.dir/build.make
@@ -75,6 +73,6 @@ CMakeFiles/debug.dir/clean:
 .PHONY : CMakeFiles/debug.dir/clean
 
 CMakeFiles/debug.dir/depend:
-	cd /home/ajack/fem-research/codes/mycode/parallel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel /home/ajack/fem-research/codes/mycode/parallel/CMakeFiles/debug.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jack/research/fem-research/codes/mycode/parallel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel /home/jack/research/fem-research/codes/mycode/parallel/CMakeFiles/debug.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/debug.dir/depend
 

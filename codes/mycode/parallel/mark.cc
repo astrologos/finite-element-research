@@ -99,7 +99,7 @@ namespace current
     Vector<double>       b;
 
     TableHandler         table_out;
-    TrilinosWrappers::SparseMatrix trilinosA;
+    dealii::TrilinosWrappers::SparseMatrix trilinosA;
   };
 
 
