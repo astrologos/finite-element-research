@@ -269,7 +269,7 @@ namespace current
     triangulation.refine_global(4);
     std:: cout << "<------------------------------>\n";
     std::cout << "<";
-    for (unsigned int cycle=0; cycle<5; ++cycle, triangulation.refine_global(1))
+    for (unsigned int cycle=0; cycle<6; ++cycle, triangulation.refine_global(1))
       {
         setup_system();
         assemble_and_solve();
