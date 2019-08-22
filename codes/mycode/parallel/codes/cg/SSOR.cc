@@ -154,7 +154,7 @@ namespace current
     sparsity.copy_from(dsp);
     A.reinit(sparsity);
     std::ofstream out ("sparsity_pattern1.svg");
-    sparsity.print_svg (out);
+    sparsity_pattern.print_svg (out);
   }
 
 
