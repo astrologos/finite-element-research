@@ -232,7 +232,7 @@ namespace current
   void LaplaceProblem<dim>::solve()
   {
     SolverControl                       solver_control(100000, 1e-10);
-    TrilinosWrappers::SolverCG          cg(solver_control);
+    SolverCG<>    			cg(solver_control);
     trilinosA.reinit(A);
 
     std:: cout << ".." << std::flush;

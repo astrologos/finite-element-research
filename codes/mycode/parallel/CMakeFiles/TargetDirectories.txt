@@ -1,0 +1,10 @@
+/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles/rebuild_cache.dir
+/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles/edit_cache.dir
+/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles/info.dir
+/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles/strip_comments.dir
+/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles/run.dir
+/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles/mark.dir
+/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles/debug.dir
+/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles/release.dir
+/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles/runclean.dir
+/home/ajack/fem-research/codes/mycode/parallel/CMakeFiles/distclean.dir

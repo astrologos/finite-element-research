@@ -232,12 +232,12 @@ namespace current
   void LaplaceProblem<dim>::solve()
   {
     SolverControl                       solver_control(100000, 1e-10);
-    TrilinosWrappers::SolverCG          cg(solver_control);
+    SolverCG<> 			        cg(solver_control);
     trilinosA.reinit(A);
 
     std:: cout << ".." << std::flush;
     TrilinosWrappers::PreconditionILUT preconditioner;
-    TrilinosWrappers::PreconditionILUT::AdditionalData additionaldata =  TrilinosWrappers::PreconditionILUT::AdditionalData(0.5,0,0,1,0);
+    TrilinosWrappers::PreconditionILUT::AdditionalData additionaldata =  TrilinosWrappers::PreconditionILUT::AdditionalData(100,0,0,100000000,0);
     Timer timer0;
     timer0.start();
     preconditioner.initialize(trilinosA,additionaldata);
