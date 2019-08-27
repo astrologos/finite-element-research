@@ -1,0 +1,232 @@
+[100%] Switch CMAKE_BUILD_TYPE to Release
+-- Autopilot invoked
+-- Run   $ make info  to print a detailed help message
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ajack/fem-research/codes/mycode/parallel
+[100%] Built target mark
+Built target release
+[ 66%] Built target mark
+[100%] Run mark with Release configuration
+
+Starting run with 1 threads::
+Using mapping with degree 1:
+============================
+<------------------------------>
+<............CMakeFiles/run.dir/build.make:57: recipe for target 'CMakeFiles/run' failed
+CMakeFiles/Makefile2:131: recipe for target 'CMakeFiles/run.dir/all' failed
+CMakeFiles/Makefile2:138: recipe for target 'CMakeFiles/run.dir/rule' failed
+Makefile:144: recipe for target 'run' failed
+[100%] Switch CMAKE_BUILD_TYPE to Release
+-- Autopilot invoked
+-- Run   $ make info  to print a detailed help message
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ajack/fem-research/codes/mycode/parallel
+[100%] Built target mark
+Built target release
+[ 66%] Built target mark
+[100%] Run mark with Release configuration
+
+Starting run with 1 threads::
+Using mapping with degree 1:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.000833,                                   0.000940,                       0.002929,                        0.006753,   26.099600,   24.846286; 
+  5120,                                  0.002517,                                   0.002524,                       0.035874,                        0.035877,   82.625160,   81.371846; 
+ 20480,                                  0.011164,                                   0.011166,                       0.311425,                        0.315381,  234.093414,  232.840100; 
+ 81920,                                  0.075247,                                   0.083166,                       3.484008,                        3.489074,  720.639282,  719.385968; 
+327680,                                  0.665976,                                   0.670054,                      88.569617,                       88.599406, 1963.902100, 1962.648785; 
+
+Using mapping with degree 2:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.000640,                                   0.000647,                       0.006812,                        0.006834,   26.061081,   24.807767; 
+  5120,                                  0.001783,                                   0.001784,                       0.032378,                        0.032381,   82.530205,   81.276891; 
+ 20480,                                  0.010640,                                   0.010641,                       0.330598,                        0.330653,  233.933121,  232.679807; 
+ 81920,                                  0.079229,                                   0.079257,                       3.294909,                        3.319063,  720.343689,  719.090375; 
+327680,                                  0.588685,                                   0.612710,                     139.954913,                      139.960792, 1963.462646, 1962.209332; 
+
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.000817,                                   0.000825,                       0.009400,                        0.009412,   26.054607,   24.801293; 
+  5120,                                  0.002209,                                   0.002223,                       0.051991,                        0.051994,   82.524605,   81.271291; 
+ 20480,                                  0.014436,                                   0.014439,                       0.415264,                        0.415292,  233.928375,  232.675061; 
+ 81920,                                  0.080121,                                   0.084150,                       6.985892,                        6.986929,  720.339417,  719.086102; 
+327680,                                  0.666361,                                   0.682497,                     148.141305,                      148.219303, 1963.458862, 1962.205548; 
+
+
+Starting run with 2 threads::
+Using mapping with degree 1:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.001163,                                   0.000839,                       0.005998,                        0.007055,   26.099600,   24.846286; 
+  5120,                                  0.002041,                                   0.001756,                       0.047467,                        0.031425,   82.625160,   81.371846; 
+ 20480,                                  0.010954,                                   0.010633,                       0.431745,                        0.295820,  234.093430,  232.840115; 
+ 81920,                                  0.072039,                                   0.071058,                       4.006569,                        2.850150,  720.639221,  719.385907; 
+327680,                                  0.629855,                                   0.646021,                     173.588702,                      129.160600, 1963.901978, 1962.648663; 
+
+Using mapping with degree 2:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.001185,                                   0.000866,                       0.007568,                        0.005829,   26.061081,   24.807767; 
+  5120,                                  0.002487,                                   0.002110,                       0.071196,                        0.038847,   82.530205,   81.276891; 
+ 20480,                                  0.010696,                                   0.010272,                       0.526542,                        0.333603,  233.933136,  232.679822; 
+ 81920,                                  0.076867,                                   0.085642,                       7.479055,                        5.702352,  720.343689,  719.090375; 
+327680,                                  0.707391,                                   0.716625,                      92.302915,                       69.253694, 1963.462646, 1962.209332; 
+
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.000988,                                   0.000692,                       0.012557,                        0.006341,   26.054607,   24.801293; 
+  5120,                                  0.001961,                                   0.001684,                       0.039956,                        0.028914,   82.524605,   81.271291; 
+ 20480,                                  0.010570,                                   0.010063,                       0.368557,                        0.246671,  233.928375,  232.675061; 
+ 81920,                                  0.079183,                                   0.076469,                       3.359355,                        2.388898,  720.339355,  719.086041; 
+327680,                                  0.577483,                                   0.593213,                     119.778633,                       89.402240, 1963.458862, 1962.205548; 
+
+
+Starting run with 4 threads::
+Using mapping with degree 1:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.000000,                                   0.000790,                       0.025341,                        0.006900,   26.099600,   24.846286; 
+  5120,                                  0.002723,                                   0.001773,                       0.065032,                        0.030175,   82.625160,   81.371846; 
+ 20480,                                  0.011576,                                   0.010690,                       0.638411,                        0.272804,  234.093430,  232.840115; 
+ 81920,                                  0.065447,                                   0.071424,                       6.240856,                        3.176485,  720.639282,  719.385968; 
+327680,                                  0.588067,                                   0.584454,                     109.719512,                       61.787449, 1963.902100, 1962.648785; 
+
+Using mapping with degree 2:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.001620,                                   0.000752,                       0.015987,                        0.007047,   26.061081,   24.807767; 
+  5120,                                  0.002642,                                   0.001802,                       0.113708,                        0.034072,   82.530205,   81.276891; 
+ 20480,                                  0.011689,                                   0.010764,                       0.583084,                        0.285521,  233.933136,  232.679822; 
+ 81920,                                  0.076241,                                   0.074707,                       5.963108,                        3.070238,  720.343689,  719.090375; 
+327680,                                  0.592852,                                   0.590681,                     102.937951,                       57.973606, 1963.462646, 1962.209332; 
+
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.001508,                                   0.000786,                       0.015239,                        0.006855,   26.054607,   24.801293; 
+  5120,                                  0.002881,                                   0.001816,                       0.071712,                        0.031484,   82.524605,   81.271291; 
+ 20480,                                  0.011190,                                   0.010512,                       0.528151,                        0.257663,  233.928375,  232.675061; 
+ 81920,                                  0.069305,                                   0.071612,                       3.866379,                        1.968272,  720.339417,  719.086102; 
+327680,                                  0.613183,                                   0.623068,                     108.782261,                       60.590319, 1963.458862, 1962.205548; 
+
+
+Starting run with 8 threads::
+Using mapping with degree 1:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.003252,                                   0.000837,                       0.028602,                        0.007249,   26.099600,   24.846286; 
+  5120,                                  0.003554,                                   0.002192,                       0.173660,                        0.038435,   82.625160,   81.371846; 
+ 20480,                                  0.013453,                                   0.011323,                       1.174574,                        0.357464,  234.093430,  232.840115; 
+ 81920,                                  0.087337,                                   0.087731,                       7.063875,                        2.396175,  720.639282,  719.385968; 
+327680,                                  0.643856,                                   0.623381,                     104.024894,                       47.295991, 1963.901978, 1962.648663; 
+
+Using mapping with degree 2:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.002319,                                   0.000638,                       0.042924,                        0.006878,   26.061081,   24.807767; 
+  5120,                                  0.003508,                                   0.001775,                       0.137094,                        0.030923,   82.530205,   81.276891; 
+ 20480,                                  0.011245,                                   0.009738,                       0.912803,                        0.260543,  233.933136,  232.679822; 
+ 81920,                                  0.077862,                                   0.075493,                       5.302029,                        2.007566,  720.343689,  719.090375; 
+327680,                                  0.601293,                                   0.587407,                     194.338634,                       84.296079, 1963.462646, 1962.209332; 
+
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.003104,                                   0.000821,                       0.010936,                        0.005192,   26.054607,   24.801293; 
+  5120,                                  0.003987,                                   0.002232,                       0.165761,                        0.036986,   82.524605,   81.271291; 
+ 20480,                                  0.014059,                                   0.011041,                       0.991241,                        0.270815,  233.928375,  232.675061; 
+ 81920,                                  0.080120,                                   0.077866,                      10.019725,                        3.737256,  720.339355,  719.086041; 
+327680,                                  0.738580,                                   0.753142,                     401.792981,                      169.718282, 1963.458862, 1962.205548; 
+
+
+Starting run with 16 threads::
+Using mapping with degree 1:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.005030,                                   0.000872,                       0.041359,                        0.007763,   26.099600,   24.846286; 
+  5120,                                  0.005420,                                   0.002335,                       0.280205,                        0.037561,   82.625160,   81.371846; 
+ 20480,                                  0.000000,                                   0.015158,                       2.029372,                        0.379472,  234.093430,  232.840115; 
+ 81920,                                  0.083351,                                   0.077087,                      10.571969,                        2.846167,  720.639282,  719.385968; 
+327680,                                  0.608116,                                   0.611499,                     217.212303,                       70.564800, 1963.902100, 1962.648785; 
+
+Using mapping with degree 2:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.004876,                                   0.000973,                       0.062162,                        0.010397,   26.061081,   24.807767; 
+  5120,                                  0.005969,                                   0.002848,                       0.311934,                        0.042989,   82.530205,   81.276891; 
+ 20480,                                  0.017564,                                   0.013605,                       2.111066,                        0.355943,  233.933136,  232.679822; 
+ 81920,                                  0.083366,                                   0.076810,                      10.509182,                        2.707206,  720.343689,  719.090375; 
+327680,                                  0.580719,                                   0.610585,                     600.692008,                      187.674215, 1963.462646, 1962.209332; 
+
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..............................>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in QMRS (sec), elapsed Wall time in QMRS (sec),    |u|_1,       error;    
+  1280,                                  0.001014,                                   0.000875,                       0.077861,                        0.008088,   26.054607,   24.801293; 
+  5120,                                  0.005688,                                   0.002117,                       0.369243,                        0.039347,   82.524605,   81.271291; 
+ 20480,                                  0.018410,                                   0.013640,                       2.248291,                        0.381424,  233.928375,  232.675061; 
+ 81920,                                  0.095551,                                   0.091262,                      12.270701,                        2.903397,  720.339355,  719.086041; 
+327680,                                  0.558894,                                   0.564592,                     373.075990,                      118.387731, 1963.458862, 1962.205548; 
+
+
+Starting run with 32 threads::
+Using mapping with degree 1:
+============================
+<------------------------------>
+<............................CMakeFiles/run.dir/build.make:57: recipe for target 'CMakeFiles/run' failed
+make[3]: *** [CMakeFiles/run] Terminated
+CMakeFiles/Makefile2:131: recipe for target 'CMakeFiles/run.dir/all' failed
+make[2]: *** [CMakeFiles/run.dir/all] Error 2
+CMakeFiles/Makefile2:138: recipe for target 'CMakeFiles/run.dir/rule' failed
+make[1]: *** [CMakeFiles/run.dir/rule] Error 2
+Makefile:144: recipe for target 'run' failed
+make: *** [run] Error 2
