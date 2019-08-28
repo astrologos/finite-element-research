@@ -257,8 +257,8 @@ namespace current
     timer1.start();
     MinRes.solve(trilinosA, x, b, preconditioner);
     timer1.stop();
-    table_out.add_value("elapsed CPU time in CG (sec),",std::to_string(timer1())+",");      
-    table_out.add_value("elapsed Wall time in CG (sec),",std::to_string(timer1.wall_time())+","); 
+    table_out.add_value("elapsed CPU time in MINRES (sec),",std::to_string(timer1())+",");      
+    table_out.add_value("elapsed Wall time in MINRES (sec),",std::to_string(timer1.wall_time())+","); 
     std:: cout << ".." << std::flush;
   }
 
@@ -287,8 +287,8 @@ namespace current
     table_out.set_precision("error;", 6);
     table_out.set_precision("elapsed CPU time in Preconditioning (sec),",3);
     table_out.set_precision("elapsed Wall time in Preconditioning (sec),",3);
-    table_out.set_precision("elapsed CPU time in CG (sec),",3);
-    table_out.set_precision("elapsed Wall time in CG (sec),",3);
+    table_out.set_precision("elapsed CPU time in MINRES (sec),",3);
+    table_out.set_precision("elapsed Wall time in MINRES (sec),",3);
     table_out.write_text(std::cout);
     std::cout << std::endl;
   }

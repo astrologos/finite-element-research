@@ -233,7 +233,7 @@ namespace current
   void LaplaceProblem<dim>::solve()
   {
     SolverControl                       solver_control(100000, 1e-10);
-    SolverMinRes<>			        MinRes(solver_control);
+    SolverCG<>			        cg(solver_control);
     trilinosA.reinit(A);
 
     std:: cout << ".." << std::flush;
@@ -255,7 +255,7 @@ namespace current
     // ----------------- Time -----------------
     Timer timer1;
     timer1.start();
-    MinRes.solve(trilinosA, x, b, preconditioner);
+    cg.solve(trilinosA, x, b, preconditioner);
     timer1.stop();
     table_out.add_value("elapsed CPU time in CG (sec),",std::to_string(timer1())+",");      
     table_out.add_value("elapsed Wall time in CG (sec),",std::to_string(timer1.wall_time())+","); 
