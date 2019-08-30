@@ -1,0 +1,212 @@
+[100%] Switch CMAKE_BUILD_TYPE to Release
+-- Autopilot invoked
+-- Run   $ make info  to print a detailed help message
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ajack/fem-research/codes/mycode/parallel
+Scanning dependencies of target mark
+[ 50%] Building CXX object CMakeFiles/mark.dir/mark.cc.o
+[100%] Linking CXX executable mark
+[100%] Switch CMAKE_BUILD_TYPE to Release
+-- Autopilot invoked
+-- Run   $ make info  to print a detailed help message
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ajack/fem-research/codes/mycode/parallel
+[100%] Built target mark
+Built target release
+[ 66%] Built target mark
+[100%] Run mark with Release configuration
+make[3]: execvp: ./mark: Permission denied
+CMakeFiles/run.dir/build.make:57: recipe for target 'CMakeFiles/run' failed
+make[3]: *** [CMakeFiles/run] Error 127
+CMakeFiles/Makefile2:131: recipe for target 'CMakeFiles/run.dir/all' failed
+make[2]: *** [CMakeFiles/run.dir/all] Error 2
+CMakeFiles/Makefile2:138: recipe for target 'CMakeFiles/run.dir/rule' failed
+make[1]: *** [CMakeFiles/run.dir/rule] Error 2
+Makefile:144: recipe for target 'run' failed
+make: *** [run] Error 2
+[200%] Built target mark
+Built target release
+Switch CMAKE_BUILD_TYPE to Release
+[ 66%] Built target mark
+[100%] Run mark with Release configuration
+-- Autopilot invoked
+-- Run   $ make info  to print a detailed help message
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ajack/fem-research/codes/mycode/parallel
+
+Starting run with 1 threads::
+Using mapping with degree 3:
+============================
+[100%] Built target mark
+Built target release
+<------------------------------>
+<..||==..[ 66%] Built target mark
+||[100%] Run mark with Release configuration
+==..||
+Starting run with 1 threads::
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..||====..||==..||==..||..||====....||||====>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in MINRES (sec), elapsed Wall time in MINRES (sec),  |u|_1,    error;   
+  1280,                                  0.006770,                                   0.006773,                         0.008369,                          0.008372, 1.252579, 0.000735; 
+  5120,                                  0.013470,                                   0.013943,                         0.048239,                          0.048242, 1.253130, 0.000184; 
+ 20480,                                  0.036552,                                   0.040613,                         0.216001,                          0.219548, 1.253268, 0.000046; 
+ 81920,                                  0.160275,                                   0.172258,                         1.780991,                          1.796718, 1.253303, 0.000011; 
+327680,                                  0.772288,                                   0.816469,                        11.602840,                         11.675130, 1.253311, 0.000003; 
+
+
+Starting run with 2 threads::
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..||==..||==..||>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in MINRES (sec), elapsed Wall time in MINRES (sec),  |u|_1,    error;   
+  1280,                                  0.003711,                                   0.003714,                         0.007086,                          0.007088, 1.252579, 0.000735; 
+  5120,                                  0.012948,                                   0.013294,                         0.044660,                          0.045177, 1.253130, 0.000184; 
+ 20480,                                  0.040159,                                   0.040373,                         0.217553,                          0.218342, 1.253268, 0.000046; 
+ 81920,                                  0.155795,                                   0.163829,                         1.772858,                          1.789420, 1.253303, 0.000011; 
+327680,                                  0.774267,                                   0.822555,                        11.514016,                         11.594885, 1.253311, 0.000003; 
+
+
+Starting run with 2 threads::
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..||==..||====..||==..||..||====....||||====>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in MINRES (sec), elapsed Wall time in MINRES (sec),  |u|_1,    error;   
+  1280,                                  0.004904,                                   0.004947,                         0.005585,                          0.005657, 1.252579, 0.000735; 
+  5120,                                  0.009902,                                   0.009904,                         0.035906,                          0.035909, 1.253130, 0.000184; 
+ 20480,                                  0.033703,                                   0.037784,                         0.268341,                          0.243040, 1.253268, 0.000046; 
+ 81920,                                  0.155910,                                   0.163920,                         1.943939,                          1.861003, 1.253303, 0.000011; 
+327680,                                  0.835920,                                   0.884131,                        11.652941,                         11.443256, 1.253311, 0.000003; 
+
+>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in MINRES (sec), elapsed Wall time in MINRES (sec),  |u|_1,    error;   
+  1280,                                  0.002154,                                   0.002239,                         0.004747,                          0.004750, 1.252579, 0.000735; 
+  5120,                                  0.005615,                                   0.009678,                         0.034440,                          0.034442, 1.253130, 0.000184; 
+ 20480,                                  0.037312,                                   0.037368,                         0.260054,                          0.242706, 1.253268, 0.000046; 
+ 81920,                                  0.149634,                                   0.157713,                         1.875935,                          1.776557, 1.253303, 0.000011; 
+327680,                                  0.773641,                                   0.813787,                        11.810416,                         11.539677, 1.253311, 0.000003; 
+
+
+Starting run with 4 threads::
+Using mapping with degree 3:
+============================
+
+Starting run with 4 threads::
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..||==<------------------------------>
+<..||==..||==..||==..||..||====..||..||====....||||====>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in MINRES (sec), elapsed Wall time in MINRES (sec),  |u|_1,    error;   
+  1280,                                  0.004924,                                   0.004983,                         0.006564,                          0.006566, 1.252579, 0.000735; 
+  5120,                                  0.009920,                                   0.009922,                         0.036226,                          0.036228, 1.253130, 0.000184; 
+ 20480,                                  0.036087,                                   0.040095,                         0.322214,                          0.244784, 1.253268, 0.000046; 
+ 81920,                                  0.156566,                                   0.164607,                         2.051148,                          1.831756, 1.253303, 0.000011; 
+327680,                                  0.770871,                                   0.831122,                        11.997174,                         11.402109, 1.253311, 0.000003; 
+
+
+Starting run with 8 threads::
+Using mapping with degree 3:
+============================
+>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in MINRES (sec), elapsed Wall time in MINRES (sec),  |u|_1,    error;   
+  1280,                                  0.002373,                                   0.002375,                         0.005131,                          0.005133, 1.252579, 0.000735; 
+  5120,                                  0.009647,                                   0.009649,                         0.035189,                          0.035224, 1.253130, 0.000184; 
+ 20480,                                  0.034185,                                   0.038121,                         0.278604,                          0.232563, 1.253268, 0.000046; 
+ 81920,                                  0.151810,                                   0.151815,                         2.027871,                          1.798057, 1.253303, 0.000011; 
+327680,                                  0.767466,                                   0.803441,                        12.076823,                         11.475413, 1.253311, 0.000003; 
+
+<------------------------------>
+<..||
+Starting run with 8 threads::
+Using mapping with degree 3:
+============================
+==<------------------------------>
+<..||==..||..||====..||..||====....||||====....||||====>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in MINRES (sec), elapsed Wall time in MINRES (sec),  |u|_1,    error;   
+  1280,                                  0.003923,                                   0.003926,                         0.006331,                          0.006334, 1.252579, 0.000735; 
+  5120,                                  0.010532,                                   0.010536,                         0.039698,                          0.039709, 1.253130, 0.000184; 
+ 20480,                                  0.041461,                                   0.041531,                         0.346773,                          0.244911, 1.253268, 0.000046; 
+ 81920,                                  0.174767,                                   0.174773,                         2.415471,                          2.028653, 1.253303, 0.000012; 
+327680,                                  0.820019,                                   0.856064,                        12.205122,                         11.292788, 1.253311, 0.000003; 
+
+
+Starting run with 16 threads::
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..||==..||==..||==>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in MINRES (sec), elapsed Wall time in MINRES (sec),  |u|_1,    error;   
+  1280,                                  0.005815,                                   0.005819,                         0.007230,                          0.007232, 1.252579, 0.000735; 
+  5120,                                  0.012326,                                   0.012343,                         0.045308,                          0.045311, 1.253130, 0.000184; 
+ 20480,                                  0.049105,                                   0.049217,                         0.384134,                          0.258564, 1.253268, 0.000046; 
+ 81920,                                  0.165617,                                   0.165624,                         2.125291,                          1.773299, 1.253303, 0.000012; 
+327680,                                  0.761643,                                   0.805600,                        12.447702,                         11.501096, 1.253311, 0.000003; 
+
+
+Starting run with 16 threads::
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..||==..||==....||||==..||====..||..||==>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in MINRES (sec), elapsed Wall time in MINRES (sec),  |u|_1,    error;   
+  1280,                                  0.004445,                                   0.004480,                         0.007132,                          0.007135, 1.252579, 0.000735; 
+  5120,                                  0.010170,                                   0.010322,                         0.038601,                          0.038605, 1.253130, 0.000184; 
+ 20480,                                  0.034175,                                   0.038362,                         0.481501,                          0.231350, 1.253268, 0.000046; 
+ 81920,                                  0.171680,                                   0.171688,                         2.416959,                          1.845163, 1.253303, 0.000012; 
+327680,                                  0.772079,                                   0.808143,                        12.756301,                         11.286514, 1.253311, 0.000003; 
+
+
+Starting run with 32 threads::
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..||==..||==..||====..||>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in MINRES (sec), elapsed Wall time in MINRES (sec),  |u|_1,    error;   
+  1280,                                  0.002672,                                   0.002674,                         0.006394,                          0.006396, 1.252579, 0.000735; 
+  5120,                                  0.010036,                                   0.010185,                         0.037144,                          0.037148, 1.253130, 0.000184; 
+ 20480,                                  0.038225,                                   0.038230,                         0.471290,                          0.233808, 1.253268, 0.000046; 
+ 81920,                                  0.152416,                                   0.156464,                         2.519544,                          1.784318, 1.253303, 0.000012; 
+327680,                                  0.801841,                                   0.858158,                        13.315364,                         11.529356, 1.253311, 0.000003; 
+
+
+Starting run with 32 threads::
+Using mapping with degree 3:
+============================
+<------------------------------>
+<..||==..||==..||====..||==..||..||==>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in MINRES (sec), elapsed Wall time in MINRES (sec),  |u|_1,    error;   
+  1280,                                  0.003786,                                   0.003790,                         0.006579,                          0.006582, 1.252579, 0.000735; 
+  5120,                                  0.012213,                                   0.012243,                         0.042819,                          0.042831, 1.253130, 0.000184; 
+ 20480,                                  0.036196,                                   0.036234,                         0.843944,                          0.245700, 1.253268, 0.000046; 
+ 81920,                                  0.154378,                                   0.154392,                         3.207773,                          1.816342, 1.253303, 0.000012; 
+327680,                                  0.777537,                                   0.798126,                        14.267616,                         11.344596, 1.253311, 0.000003; 
+
+[100%] Built target run
+==>
+
+cells,  elapsed CPU time in Preconditioning (sec), elapsed Wall time in Preconditioning (sec), elapsed CPU time in MINRES (sec), elapsed Wall time in MINRES (sec),  |u|_1,    error;   
+  1280,                                  0.005029,                                   0.005034,                         0.006784,                          0.006788, 1.252579, 0.000735; 
+  5120,                                  0.012658,                                   0.012663,                         0.045061,                          0.045064, 1.253130, 0.000184; 
+ 20480,                                  0.037387,                                   0.037540,                         0.582773,                          0.244158, 1.253268, 0.000046; 
+ 81920,                                  0.151808,                                   0.151860,                         3.608102,                          1.862023, 1.253303, 0.000012; 
+327680,                                  0.791079,                                   0.822642,                        15.045206,                         11.572884, 1.253311, 0.000003; 
+
+Built target run
