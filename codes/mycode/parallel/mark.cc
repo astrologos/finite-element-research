@@ -2,7 +2,7 @@
  *
  * This is a test file adapted from the deal.ii library examples
  * by Jack Alvarez.
- * 
+ *
  * This file is used for performance testing
  * involving parallelism and mesh refinement.
  *
@@ -42,6 +42,7 @@
 #include <deal.II/grid/grid_generator.h>
 #include <deal.II/grid/manifold_lib.h>
 #include <deal.II/grid/tria_accessor.h>
+#include <deal.II/lac/solver_gmres.h>
 #include <deal.II/grid/tria_iterator.h>
 #include <deal.II/dofs/dof_handler.h>
 #include <deal.II/dofs/dof_accessor.h>
@@ -66,8 +67,10 @@
 #include <deal.II/lac/trilinos_solver.h>
 #include <iostream>
 #include <fstream>
+#include <deal.II/lac/solver_bicgstab.h>
 #include <memory>
 #include <array>
+
 
 
 // The last step is as in all previous programs:
@@ -166,7 +169,7 @@ namespace current
     A.reinit(sparsity);
     std::ofstream out ("sparsity_pattern1.svg");
     sparsity.print_svg(out);
-    
+
   }
 
 
@@ -233,33 +236,41 @@ namespace current
   void LaplaceProblem<dim>::solve()
   {
     SolverControl                       solver_control(100000, 1e-10);
-    SolverCG<>			        cg(solver_control);
+    SolverMinRes<>			        minres(solver_control);
     trilinosA.reinit(A);
-
     std:: cout << ".." << std::flush;
     TrilinosWrappers::PreconditionAMG preconditioner;
     Timer timer0;
     timer0.start();
     TrilinosWrappers::PreconditionAMG::AdditionalData additionaldata;
     additionaldata.n_cycles=1;
-    additionaldata.smoother_sweeps = 3;
-    additionaldata.aggregation_threshold= 0.002;
-    additionaldata.smoother_type="Amesos-KLU";
+    additionaldata.smoother_sweeps = 1;
+    additionaldata.elliptic=true;
+    additionaldata.aggregation_threshold= 0.08;
+    std::vector<std::vector<bool>> constant_modes;
+    DoFTools::extract_constant_modes(dof_handler, ComponentMask(), constant_modes);
+
+//    additionaldata.output_details=true;
+    additionaldata.higher_order_elements=false;
+    additionaldata.smoother_type="Aztec";
     additionaldata.coarse_type="MLS";
+    additionaldata.constant_modes=constant_modes;
+//    additionaldata.w_cycle=true;
     preconditioner.initialize(trilinosA,additionaldata);
+//    preconditioner.vmult(x,b);
     timer0.stop();
-    std:: cout << ".." << std::flush;
+    std:: cout << "||" << std::flush;
     table_out.add_value("elapsed CPU time in Preconditioning (sec),",std::to_string(timer0())+",");      
     table_out.add_value("elapsed Wall time in Preconditioning (sec),",std::to_string(timer0.wall_time())+","); 
 
     // ----------------- Time -----------------
     Timer timer1;
     timer1.start();
-    cg.solve(trilinosA, x, b, preconditioner);
+    minres.solve(trilinosA, x, b, preconditioner);
     timer1.stop();
-    table_out.add_value("elapsed CPU time in CG (sec),",std::to_string(timer1())+",");      
-    table_out.add_value("elapsed Wall time in CG (sec),",std::to_string(timer1.wall_time())+","); 
-    std:: cout << ".." << std::flush;
+    table_out.add_value("elapsed CPU time in MINRES (sec),",std::to_string(timer1())+",");      
+    table_out.add_value("elapsed Wall time in MINRES (sec),",std::to_string(timer1.wall_time())+","); 
+    std:: cout << "==" << std::flush;
   }
 
 
@@ -287,8 +298,8 @@ namespace current
     table_out.set_precision("error;", 6);
     table_out.set_precision("elapsed CPU time in Preconditioning (sec),",3);
     table_out.set_precision("elapsed Wall time in Preconditioning (sec),",3);
-    table_out.set_precision("elapsed CPU time in CG (sec),",3);
-    table_out.set_precision("elapsed Wall time in CG (sec),",3);
+    table_out.set_precision("elapsed CPU time in MINRES (sec),",3);
+    table_out.set_precision("elapsed Wall time in MINRES (sec),",3);
     table_out.write_text(std::cout);
     std::cout << std::endl;
   }
@@ -318,7 +329,7 @@ int main(int argc, char **argv)
           std::cout.precision(5);
 
           // Run problem for mapping up to degree 3
-          for (unsigned int poly_degree=1; poly_degree<=3; ++poly_degree) {
+          for (unsigned int poly_degree=3; poly_degree<=3; ++poly_degree) {
           
             current::LaplaceProblem<2>(poly_degree).run();
             }
@@ -349,4 +360,3 @@ int main(int argc, char **argv)
     }
     return 0;
 }
-

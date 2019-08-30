@@ -39,6 +39,8 @@ deal.II/grid/manifold_lib.h
 -
 deal.II/grid/tria_accessor.h
 -
+deal.II/lac/solver_gmres.h
+-
 deal.II/grid/tria_iterator.h
 -
 deal.II/dofs/dof_handler.h
@@ -86,6 +88,8 @@ deal.II/lac/trilinos_solver.h
 iostream
 -
 fstream
+-
+deal.II/lac/solver_bicgstab.h
 -
 memory
 -
