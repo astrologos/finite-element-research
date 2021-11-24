@@ -1,8 +1,0 @@
-/home/ajack/research/codes/examples/step-11/CMakeFiles/runclean.dir
-/home/ajack/research/codes/examples/step-11/CMakeFiles/strip_comments.dir
-/home/ajack/research/codes/examples/step-11/CMakeFiles/run.dir
-/home/ajack/research/codes/examples/step-11/CMakeFiles/step-11.dir
-/home/ajack/research/codes/examples/step-11/CMakeFiles/info.dir
-/home/ajack/research/codes/examples/step-11/CMakeFiles/debug.dir
-/home/ajack/research/codes/examples/step-11/CMakeFiles/distclean.dir
-/home/ajack/research/codes/examples/step-11/CMakeFiles/release.dir
