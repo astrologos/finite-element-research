@@ -1,6 +1,6 @@
 # FEM Research
 
-Optimizing preconditioners for CGM performance in FEM.
+Optimizing preconditioners for Conjugate Gradient Method performance in Finite Element simulations.
 
 Notes:
 - CMakeLists.txt has been altered to take any deal.ii code named "mark.cc"
